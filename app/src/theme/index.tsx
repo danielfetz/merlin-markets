@@ -128,7 +128,7 @@ export const theme = {
     green: '#4B9E98',
     darkGreen: '#4B948F',
     greenLight: '#60D099',
-    mainBodyBackground: '#fff',
+    mainBodyBackground: '#f8f8f8',
     primary: '#3F51B5',
     primaryLight: '#5C6BC0',
     hyperlink: '#1E88E5',
