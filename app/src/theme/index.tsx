@@ -128,7 +128,7 @@ export const theme = {
     green: '#4B9E98',
     darkGreen: '#4B948F',
     greenLight: '#60D099',
-    mainBodyBackground: '#f8f8f8',
+    mainBodyBackground: '#fff',
     primary: '#3F51B5',
     primaryLight: '#5C6BC0',
     hyperlink: '#1E88E5',
@@ -169,7 +169,7 @@ export const theme = {
     titleColor: '#000',
   },
   header: {
-    backgroundColor: '#fff',
+    backgroundColor: 'transparent',
     boxShadow: 'none',
     height: '66px',
     color: '#37474F',
