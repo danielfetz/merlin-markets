@@ -109,8 +109,9 @@ const ButtonFilterStyled = styled(ButtonRoundStyled as any)`
 
 const ListWrapper = styled.div`
   border-top: 1px solid ${props => props.theme.borders.borderColor};
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
   min-height: 355px;
 `
 
