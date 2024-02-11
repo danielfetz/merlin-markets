@@ -27,7 +27,7 @@ export const HeaderWrapper = styled.div`
   display: flex;
   flex-grow: 0;
   flex-shrink: 0;
-  height: 88px;
+  height: 72px;
   padding: 0 30px;
   justify-content: space-between;
   position: sticky;
