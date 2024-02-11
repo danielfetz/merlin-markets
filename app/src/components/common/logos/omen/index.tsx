@@ -15,7 +15,7 @@ export const OmenLogo = () => {
       <div className="logo">
         <span aria-label="wizard" role="img">
           🧙‍♂️
-        </span>{" "}
+        </span>{"·"}
         <span>Merlin</span>
       </div>
     </Wrapper>
