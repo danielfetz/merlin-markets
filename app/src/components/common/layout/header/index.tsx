@@ -44,9 +44,13 @@ export const HeaderInner = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   max-width: 100%;
-  padding: 24px 0px;
+  padding: 0 20px;
   position: relative;
-  width: ${props => props.theme.themeBreakPoints.xxl};
+  width: 1000px;
+  background: white;
+  border-radius: 24px;
+  margin-top: 32px;
+  box-shadow: 0 0 25px #0000000d;
 `
 
 export const LogoWrapper = styled.a<{ disabled?: boolean }>`
