@@ -26,7 +26,7 @@ import {
 } from '../../../../../util/tools'
 import { bigNumberToNumber } from '../../../../../util/tools/formatting'
 import { MarketMakerDataItem, Token } from '../../../../../util/types'
-import { IconApySmall, IconStar } from '../../../../common/icons'
+import { IconApySmall } from '../../../../common/icons'
 
 const Wrapper = styled(NavLink)`
   border-bottom: 1px solid ${props => props.theme.borders.borderColor};
@@ -226,7 +226,6 @@ export const ListItem: React.FC<Props> = (props: Props) => {
     <Wrapper to={`/${address}`}>
       <Title>{isScalar ? scalarTitle : title}</Title>
       <Info>
-        <IconStar></IconStar>
         <Outcome>
           {isScalar
             ? `${currentPrediction ? formatNumber(currentPrediction.toString()) : 'Unknown'} ${unit}`
