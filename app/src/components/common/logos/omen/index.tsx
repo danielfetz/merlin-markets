@@ -7,6 +7,9 @@ const Wrapper = styled.div`
     font-weight: 500;
     color: #333;
   }
+  .text {
+    margin-left: 4px;
+  }
 `
 
 export const OmenLogo = () => {
@@ -16,7 +19,7 @@ export const OmenLogo = () => {
         <span aria-label="wizard" role="img">
           🧙‍♂️
         </span>
-        <span>Merlin</span>
+        <span className="text">Merlin</span>
       </div>
     </Wrapper>
   )
