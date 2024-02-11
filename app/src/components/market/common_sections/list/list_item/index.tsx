@@ -33,9 +33,13 @@ const Wrapper = styled(NavLink)`
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding: 22px 25px;
   text-decoration: none;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 1px 1px #0000000d;
+  min-height: 200px;
+  justify-content: space-between;
 
   &:active,
   &:hover {
