@@ -552,6 +552,15 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
       </Actions>
       <ListCard>
         <TopContents>
+                    {SHOW_CATEGORIES && (
+            <MarketsCategories>
+              {CATEGORIES_WITH_ALL.map((item, index) => (
+                <SelectableButton active={item === category} key={index} onClick={() => setCategory(item)}>
+                  {item}
+                </SelectableButton>
+              ))}
+            </MarketsCategories>
+          )}
           <FiltersWrapper>
             <FiltersLeftWrapper>
               <ButtonFilterStyled active={showAdvancedFilters} onClick={toggleFilters}>
