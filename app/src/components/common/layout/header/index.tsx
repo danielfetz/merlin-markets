@@ -116,11 +116,6 @@ export const ContentsRight = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: auto 0 auto auto;
-
-  @media (min-width: ${props => props.theme.themeBreakPoints.md}) {
-    margin: auto 0 0 auto;
-    flex-wrap: unset;
-  }
 `
 
 const HeaderButton = styled(ButtonRound)`
