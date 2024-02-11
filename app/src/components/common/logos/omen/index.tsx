@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 export const OmenLogo = () => {
   return (
     <Wrapper>
-      <span className="logo">🧙‍♂️ Merlin</span>
+      <div className="logo"><span role="img" aria-label="wizard">🧙‍♂️</span> Merlin</div>
     </Wrapper>
   )
 }
