@@ -108,7 +108,6 @@ const ButtonFilterStyled = styled(ButtonRoundStyled as any)`
 `
 
 const ListWrapper = styled.div`
-  border-top: 1px solid ${props => props.theme.borders.borderColor};
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 16px;
@@ -197,7 +196,6 @@ const BottomContents = styled.div`
   align-items: center;
   justify-content: flex-end;
   padding: 20px 0px 25px 0px;
-  border-top: 1px solid ${props => props.theme.borders.borderColor};
 `
 
 const FiltersLeftWrapper = styled.div`
