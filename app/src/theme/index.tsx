@@ -218,7 +218,7 @@ export const theme = {
     placeholderFontWeight: '400',
   },
   mainContainer: {
-    maxWidth: '586px',
+    maxWidth: '1000px',
   },
   moreMenu: {
     buttonBorder: '#DCDFF2',
