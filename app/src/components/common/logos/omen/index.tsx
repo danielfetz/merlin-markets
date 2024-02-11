@@ -13,7 +13,9 @@ export const OmenLogo = () => {
   return (
     <Wrapper>
       <div className="logo">
-        <span aria-label="wizard" role="img">🧙‍♂️</span>{" "}
+        <span aria-label="wizard" role="img">
+          🧙‍♂️
+        </span>{" "}
         <span>Merlin</span>
       </div>
     </Wrapper>
