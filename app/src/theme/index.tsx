@@ -130,7 +130,7 @@ export const theme = {
     greenLight: '#60D099',
     mainBodyBackground: '#fff',
     primary: '#3F51B5',
-    primaryLight: '#5C6BC0',
+    primaryLight: '#2D9B87',
     hyperlink: '#1E88E5',
     secondary: '#EDEFF8',
     tertiary: '#DCDFF2',
