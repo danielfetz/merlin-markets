@@ -33,7 +33,6 @@ export const HeaderWrapper = styled.div`
   position: sticky;
   top: 0;
   z-index: 5;
-  border-bottom: 1px solid ${props => props.theme.buttonPrimaryLine.borderColorDisabled};
 `
 
 export const HeaderInner = styled.div`
