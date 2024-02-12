@@ -30,6 +30,22 @@ import { ListItem } from '../common_sections/list/list_item'
 import { AdvancedFilters } from './advanced_filters'
 import { Search } from './search'
 
+const InfoCardsOverview = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+  overflow-x: scroll;
+`
+
+const InfoCard = styled.div`
+  background: linear-gradient(85deg, rgb(93, 120, 189) 3.16%, rgb(164, 168, 181) 110.87%);
+  border-radius: 18px;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  min-height: 200px;
+`
+
 const TopContents = styled.div`
   padding: 24px 0px;
 `
@@ -467,6 +483,11 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
 
   return (
     <>
+      <InfoCardsOverview>
+        <InfoCard />
+        <InfoCard />
+        <InfoCard />
+      </InfoCardsOverview>
       <ListCard>
         <TopContents>
           <FiltersWrapper>
