@@ -9,7 +9,7 @@ import { useConnectedWeb3Context } from '../../../../contexts'
 import { networkIds } from '../../../../util/networks'
 import { RemoteData } from '../../../../util/remote_data'
 import { bigNumberToString } from '../../../../util/tools/formatting'
-import { ExchangeType } from '../../../../util/types'
+import { CategoryDataItem, ExchangeType } from '../../../../util/types'
 import { Button, ButtonCircle, ButtonRound } from '../../../button'
 import { ButtonType } from '../../../button/button_styling_types'
 import {
