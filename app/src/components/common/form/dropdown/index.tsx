@@ -193,7 +193,7 @@ const DropdownVariantCardItemsCSS = css`
   overflow-y: auto;
 `
 const DropdownVariantCardItemsContainerCSS = css`
-  border-radius: 8px;
+  border-radius: 16px;
   border: 1px solid ${props => props.theme.dropdown.buttonBorderColor};
   width: 100%;
   left: 0;
@@ -270,13 +270,13 @@ const Item = styled.div<{ active: boolean; dropdownVariant?: DropdownVariant }>`
   background-color: ${props =>
     props.active
       ? props.theme.dropdown.dropdownItems.item.backgroundColorActive
-      : props.theme.dropdown.dropdownItems.item.backgroundColorActive};
+      : props.theme.dropdown.dropdownItems.item.backgroundColor};
   color: ${props => (props.active ? props.theme.colors.textColorDark : props.theme.colors.textColor)};
   cursor: pointer;
   display: flex;
   padding: ${props => (props.dropdownVariant === DropdownVariant.card ? '8px 12px' : '8px 12px')};
   margin: ${props => (props.dropdownVariant === DropdownVariant.card ? '0' : '0')};
-  border-radius: ${props => (props.dropdownVariant === DropdownVariant.card ? '16px' : '16px')};
+  border-radius: ${props => (props.dropdownVariant === DropdownVariant.card ? '8px' : '8px')};
 
   &:hover {
     color: ${props => props.theme.dropdown.dropdownItems.item.color};
