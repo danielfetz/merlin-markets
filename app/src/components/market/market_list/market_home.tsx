@@ -33,7 +33,7 @@ import { Search } from './search'
 const CategoryButton = styled(ButtonRound)`
   margin: 5px;
   padding: 5px 10px;
-  background-color: ${({ isSelected, theme }) => isSelected ? theme.colors.secondary : theme.colors.primary};
+  background-color: ${({ isSelected, theme }) => (isSelected ? theme.colors.secondary : theme.colors.primary)};
   color: ${({ theme }) => theme.colors.textColorDark};
   &:hover {
     background-color: ${({ theme }) => theme.colors.secondary}; // Adjust this as needed
@@ -466,8 +466,8 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
 
   // Function to handle category selection
   const handleCategorySelect = (category: string) => {
-    setCategory(category); // This sets the category for filtering
-    setSelectedCategory(category); // This updates the state to highlight the button
+    setCategory(category) // This sets the category for filtering
+    setSelectedCategory(category) // This updates the state to highlight the button
   }
 
   // Render category buttons with conditional styling
@@ -475,10 +475,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
     if (RemoteData.hasData(categories)) {
       return (
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', marginTop: '10px' }}>
-          <CategoryButton 
-            onClick={() => handleCategorySelect('All')}
-            isSelected={'All' === selectedCategory}
-          >
+          <CategoryButton onClick={() => handleCategorySelect('All')} isSelected={'All' === selectedCategory}>
             All Categories
           </CategoryButton>
           {categories.data.map((item: CategoryDataItem) => (
