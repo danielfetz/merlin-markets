@@ -40,7 +40,7 @@ const DropdownOpenCSS = css`
 const DropdownVariantCardOpenCSS = css`
   &,
   &:hover {
-    border-color: ${props => props.theme.textfield.borderColorHover};
+    border-color: ${props => props.theme.dropdown.buttonBorderColorHover};
     z-index: 12345;
   }
   .chevronUp {
