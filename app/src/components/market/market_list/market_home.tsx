@@ -319,27 +319,6 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
     },
   ]
 
-  const marketTypes = [
-    {
-      type: MarketTypes.all,
-      title: 'All',
-      active: templateId === null,
-      onClick: () => setTemplateId(MarketTypes.all),
-    },
-    {
-      type: MarketTypes.categorical,
-      title: 'Categorical',
-      active: templateId === MarketTypes.categorical,
-      onClick: () => setTemplateId(MarketTypes.categorical),
-    },
-    {
-      type: MarketTypes.scalar,
-      title: 'Scalar',
-      active: templateId === MarketTypes.scalar,
-      onClick: () => setTemplateId(MarketTypes.scalar),
-    },
-  ]
-
   // Only allow to filter myMarkets when the user is connected
   if (context.account) {
     filters.push({
