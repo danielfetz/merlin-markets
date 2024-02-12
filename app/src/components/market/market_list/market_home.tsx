@@ -576,22 +576,15 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
                 dropdownPosition={DropdownPosition.center}
                 items={fetchMyMarkets ? myMarketsSortItems : sortItems}
               />
-        <MarketsDropdown
-          currentItem={
-            RemoteData.hasData(categories) ? categories.data.findIndex(i => i.id === decodeURI(category)) + 1 : 0
-          }
-          dirty={true}
-          dropdownDirection={DropdownDirection.downwards}
-          dropdownVariant={DropdownVariant.card}
-          items={categoryItems}
-        />
-        <MarketsFilterDropdown
-          currentItem={filters.findIndex(i => i.state === state)}
-          dirty={true}
-          dropdownDirection={DropdownDirection.downwards}
-          dropdownVariant={DropdownVariant.card}
-          items={filterItems}
-        />
+              <MarketsDropdown
+                currentItem={
+                  RemoteData.hasData(categories) ? categories.data.findIndex(i => i.id === decodeURI(category)) + 1 : 0
+                }
+                dirty={true}
+                dropdownDirection={DropdownDirection.downwards}
+                dropdownVariant={DropdownVariant.card}
+                items={categoryItems}
+              />
             </FiltersControls>
           </FiltersWrapper>
         </TopContents>
