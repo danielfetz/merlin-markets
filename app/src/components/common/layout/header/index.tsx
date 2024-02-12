@@ -43,13 +43,14 @@ export const HeaderInner = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   max-width: 100%;
-  padding: 0 20px;
+  padding: 0 24px;
   position: relative;
   width: 1000px;
   background: white;
   border-radius: 24px;
   margin-top: 32px;
-  box-shadow: 0 0 25px #0000000d;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.01), 0px 6px 12px rgba(0, 0, 0, 0.01);
+  border: 1px solid #ececf6;
 `
 
 export const LogoWrapper = styled.a<{ disabled?: boolean }>`
