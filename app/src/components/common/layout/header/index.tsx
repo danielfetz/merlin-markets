@@ -47,7 +47,7 @@ export const HeaderInner = styled.div`
   position: relative;
   width: 1000px;
   background: white;
-  border-radius: 24px;
+  border-radius: 22px;
   margin-top: 32px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.01), 0px 6px 12px rgba(0, 0, 0, 0.01);
   border: 1px solid #ececf6;
