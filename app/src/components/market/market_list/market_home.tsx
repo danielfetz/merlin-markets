@@ -471,7 +471,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
   }
 
   // Render category buttons with conditional styling
-  export const renderCategoryButtons = () => {
+  const renderCategoryButtons = () => {
     if (RemoteData.hasData(categories)) {
       return (
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', marginTop: '10px' }}>
