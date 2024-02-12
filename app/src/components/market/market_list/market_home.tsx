@@ -30,6 +30,11 @@ import { ListItem } from '../common_sections/list/list_item'
 import { AdvancedFilters } from './advanced_filters'
 import { Search } from './search'
 
+const CategoryButton = styled(ButtonRoundStyled)`
+  margin: 5px;
+  padding: 5px 10px;
+`
+
 const InfoCardsOverview = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(322.667px, 1fr));
@@ -455,29 +460,28 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
     }
   })
 
-  const categoryItems: Array<DropdownItemProps> =
-    RemoteData.hasData(categories) && categories.data.length > 0
-      ? ([
-          {
-            content: <CustomDropdownItem>{'All Categories'}</CustomDropdownItem>,
-            onClick: () => {
-              setCategory('All')
-            },
-          },
-          ...categories.data.map((item: CategoryDataItem) => {
-            return {
-              content: <CustomDropdownItem>{item.id}</CustomDropdownItem>,
-              onClick: () => {
-                setCategory(item.id)
-              },
-            }
-          }),
-        ] as Array<DropdownItemProps>)
-      : [
-          {
-            content: <CustomDropdownItem>{'All Categories'}</CustomDropdownItem>,
-          },
-        ]
+  // Function to handle category selection
+  const handleCategorySelect = (selectedCategory: string) => {
+    setCategory(selectedCategory);
+    // Include any other logic you need to run when a category is selected
+  }
+
+  // Render category buttons instead of a dropdown
+  const renderCategoryButtons = () => {
+    if (RemoteData.hasData(categories)) {
+      return (
+        <div>
+          <CategoryButton onClick={() => handleCategorySelect('All')}>All Categories</CategoryButton>
+          {categories.data.map((item: CategoryDataItem) => (
+            <CategoryButton key={item.id} onClick={() => handleCategorySelect(item.id)}>
+              {item.id}
+            </CategoryButton>
+          ))}
+        </div>
+      )
+    }
+    return null
+  }
 
   const noOwnMarkets = RemoteData.is.success(markets) && markets.data.length === 0 && state === MarketStates.myMarkets
   const noMarketsAvailable =
@@ -491,6 +495,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
 
   return (
     <>
+      {renderCategoryButtons()}
       <InfoCardsOverview>
         <InfoCard
           style={{
