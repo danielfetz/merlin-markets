@@ -471,7 +471,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
   }
 
   // Render category buttons with conditional styling
-  const renderCategoryButtons = () => {
+  const renderCategoryButtons = ({ categories, selectedCategory, onSelectCategory }) => {
     if (RemoteData.hasData(categories)) {
       return (
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', marginTop: '10px' }}>
@@ -492,6 +492,8 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
     }
     return null
   }
+
+  export { renderCategoryButtons }
 
   const noOwnMarkets = RemoteData.is.success(markets) && markets.data.length === 0 && state === MarketStates.myMarkets
   const noMarketsAvailable =
