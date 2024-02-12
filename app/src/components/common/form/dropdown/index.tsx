@@ -193,7 +193,7 @@ const DropdownVariantCardItemsCSS = css`
   overflow-y: auto;
 `
 const DropdownVariantCardItemsContainerCSS = css`
-  border-radius: 16px;
+  border-radius: 8px;
   border: 1px solid ${props => props.theme.dropdown.buttonBorderColor};
   width: 100%;
   left: 0;
