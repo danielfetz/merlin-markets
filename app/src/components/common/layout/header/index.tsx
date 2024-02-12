@@ -202,7 +202,7 @@ const HeaderContainer: React.FC = (props: any) => {
   const { relay, toggleRelay } = context
   const { account, active, connectorName, error, networkId } = context.rawWeb3Context
 
-  const { currentFilter, history, ...restProps } = props
+  const { categories, currentFilter, history, ...restProps } = props
   const [isConnectWalletModalOpen, setConnectWalletModalState] = useState(false)
   const [isYourConnectionModalOpen, setYourConnectionModalState] = useState(false)
   const [isDepositWithdrawModalOpen, setDepositWithdrawModalState] = useState(false)
