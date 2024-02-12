@@ -273,6 +273,38 @@ interface Props {
 
 const logger = getLogger('MarketHome')
 
+// State to track the selected category
+const [selectedCategory, setSelectedCategory] = useState<string>('All')
+
+// Function to handle category selection
+const handleCategorySelect = (category: string) => {
+  setCategory(category) // This sets the category for filtering
+  setSelectedCategory(category) // This updates the state to highlight the button
+}
+
+// Render category buttons with conditional styling
+export const renderCategoryButtons = ({ categories, selectedCategory, onSelectCategory }) => {
+  if (RemoteData.hasData(categories)) {
+    return (
+      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', marginTop: '10px' }}>
+        <CategoryButton isSelected={'All' === selectedCategory} onClick={() => handleCategorySelect('All')}>
+          All Categories
+        </CategoryButton>
+        {categories.data.map((item: CategoryDataItem) => (
+          <CategoryButton
+            isSelected={item.id === selectedCategory}
+            key={item.id}
+            onClick={() => handleCategorySelect(item.id)}
+          >
+            {item.id}
+          </CategoryButton>
+        ))}
+      </div>
+    )
+  }
+  return null
+}
+
 export const MarketHome: React.FC<Props> = (props: Props) => {
   const {
     categories,
@@ -460,40 +492,6 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
       onClick: item.onClick,
     }
   })
-
-  // State to track the selected category
-  const [selectedCategory, setSelectedCategory] = useState<string>('All')
-
-  // Function to handle category selection
-  const handleCategorySelect = (category: string) => {
-    setCategory(category) // This sets the category for filtering
-    setSelectedCategory(category) // This updates the state to highlight the button
-  }
-
-  // Render category buttons with conditional styling
-  const renderCategoryButtons = ({ categories, selectedCategory, onSelectCategory }) => {
-    if (RemoteData.hasData(categories)) {
-      return (
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', marginTop: '10px' }}>
-          <CategoryButton isSelected={'All' === selectedCategory} onClick={() => handleCategorySelect('All')}>
-            All Categories
-          </CategoryButton>
-          {categories.data.map((item: CategoryDataItem) => (
-            <CategoryButton
-              isSelected={item.id === selectedCategory}
-              key={item.id}
-              onClick={() => handleCategorySelect(item.id)}
-            >
-              {item.id}
-            </CategoryButton>
-          ))}
-        </div>
-      )
-    }
-    return null
-  }
-
-  export { renderCategoryButtons }
 
   const noOwnMarkets = RemoteData.is.success(markets) && markets.data.length === 0 && state === MarketStates.myMarkets
   const noMarketsAvailable =
