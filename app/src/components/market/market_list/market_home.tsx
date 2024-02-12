@@ -37,7 +37,7 @@ const InfoCardsOverview = styled.div`
   overflow-x: scroll;
   max-width: 100%;
 
-  @media (max-width: 1060px) {
+  @media (max-width: 1059px) {
     grid-template-columns: repeat(3, 290px);
     scroll-padding-left: 2.5rem;
     scroll-padding-right: 2.5rem;
