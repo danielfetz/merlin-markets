@@ -269,7 +269,7 @@ const HeaderContainer: React.FC = (props: any) => {
     <HeaderWrapper {...restProps}>
       <HeaderInner>
         <ContentsLeft>
-          {renderCategoryButtons()}
+          <CategoryButtons categories={categories} onSelectCategory={setCategory} />
           <LogoWrapper disabled={!hasRouter} href={'/#/liquidity'}>
             <Logo />
           </LogoWrapper>
