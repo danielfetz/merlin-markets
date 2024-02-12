@@ -572,12 +572,14 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
                 }
                 dirty={true}
                 dropdownDirection={DropdownDirection.downwards}
+                dropdownVariant={DropdownVariant.card}
                 items={categoryItems}
               />
               <MarketsFilterDropdown
                 currentItem={filters.findIndex(i => i.state === state)}
                 dirty={true}
                 dropdownDirection={DropdownDirection.downwards}
+                dropdownVariant={DropdownVariant.card}
                 items={filterItems}
               />
               <SortDropdown
