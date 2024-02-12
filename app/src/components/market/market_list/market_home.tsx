@@ -523,31 +523,6 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
 
   return (
     <>
-      <Actions>
-        <MarketsTypeDropdown
-          currentItem={marketTypes.findIndex(i => i.type === templateId)}
-          dirty={true}
-          dropdownDirection={DropdownDirection.downwards}
-          dropdownVariant={DropdownVariant.card}
-          items={marketTypeItems}
-        />
-        <MarketsDropdown
-          currentItem={
-            RemoteData.hasData(categories) ? categories.data.findIndex(i => i.id === decodeURI(category)) + 1 : 0
-          }
-          dirty={true}
-          dropdownDirection={DropdownDirection.downwards}
-          dropdownVariant={DropdownVariant.card}
-          items={categoryItems}
-        />
-        <MarketsFilterDropdown
-          currentItem={filters.findIndex(i => i.state === state)}
-          dirty={true}
-          dropdownDirection={DropdownDirection.downwards}
-          dropdownVariant={DropdownVariant.card}
-          items={filterItems}
-        />
-      </Actions>
       <ListCard>
         <TopContents>
           <FiltersWrapper>
