@@ -36,6 +36,14 @@ const InfoCardsOverview = styled.div`
   gap: 16px;
   overflow-x: scroll;
   max-width: 100%;
+
+  @media (min-width: ${props => props.theme.themeBreakPoints.sm}) {
+    grid-template-columns: repeat(3, 280px);
+    scroll-padding-left: 2.5rem;
+    scroll-padding-right: 2.5rem;
+    gap: 16px;
+    grid-auto-flow: row;
+  }  
 `
 
 const InfoCard = styled.div`
