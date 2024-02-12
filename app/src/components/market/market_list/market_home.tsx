@@ -52,7 +52,7 @@ const FiltersControls = styled.div<{ disabled?: boolean }>`
   margin-left: auto;
   margin-right: auto;
   pointer-events: ${props => (props.disabled ? 'none' : 'initial')};
-  
+
   @media (min-width: ${props => props.theme.themeBreakPoints.sm}) {
     margin-left: 0;
     margin-right: 0;
