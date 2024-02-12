@@ -72,7 +72,7 @@ const DropdownVariantPillCSS = css`
 const DropdownVariantCardCSS = css`
   ${CardCSS};
   flex: 1;
-  padding: 14px 25px;
+  padding: 8px 16px;
   position: relative;
   border: 1px solid ${props => props.theme.dropdown.buttonBorderColor};
   text-transform: capitalize;
@@ -270,13 +270,13 @@ const Item = styled.div<{ active: boolean; dropdownVariant?: DropdownVariant }>`
   background-color: ${props =>
     props.active
       ? props.theme.dropdown.dropdownItems.item.backgroundColorActive
-      : props.theme.dropdown.dropdownItems.item.backgroundColor};
+      : props.theme.dropdown.dropdownItems.item.backgroundColorActive};
   color: ${props => (props.active ? props.theme.colors.textColorDark : props.theme.colors.textColor)};
   cursor: pointer;
   display: flex;
   padding: ${props => (props.dropdownVariant === DropdownVariant.card ? '8px 12px' : '8px 12px')};
   margin: ${props => (props.dropdownVariant === DropdownVariant.card ? '0' : '0')};
-  border-radius: ${props => (props.dropdownVariant === DropdownVariant.card ? '8px' : '8px')};
+  border-radius: ${props => (props.dropdownVariant === DropdownVariant.card ? '16px' : '16px')};
 
   &:hover {
     color: ${props => props.theme.dropdown.dropdownItems.item.color};
