@@ -273,24 +273,23 @@ interface Props {
 
 const logger = getLogger('MarketHome')
 
-// State to track the selected category
-const [selectedCategory, setSelectedCategory] = useState<string>('All')
+// Proper React functional component naming and definition
+const CategoryButtons = ({ categories, onSelectCategory }) => {
+  const [selectedCategory, setSelectedCategory] = useState('All') // Moved inside the component
 
-// Function to handle category selection
-const handleCategorySelect = (category: string) => {
-  setCategory(category) // This sets the category for filtering
-  setSelectedCategory(category) // This updates the state to highlight the button
-}
+  // Function to handle category selection, now inside the component
+  const handleCategorySelect = (category) => {
+    onSelectCategory(category) // Assuming onSelectCategory is a prop function to update the parent component
+    setSelectedCategory(category) // This updates the state to highlight the button
+  };
 
-// Render category buttons with conditional styling
-export const renderCategoryButtons = ({ categories, selectedCategory, onSelectCategory }) => {
   if (RemoteData.hasData(categories)) {
     return (
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', marginTop: '10px' }}>
         <CategoryButton isSelected={'All' === selectedCategory} onClick={() => handleCategorySelect('All')}>
           All Categories
         </CategoryButton>
-        {categories.data.map((item: CategoryDataItem) => (
+        {categories.data.map((item) => (
           <CategoryButton
             isSelected={item.id === selectedCategory}
             key={item.id}
@@ -304,6 +303,8 @@ export const renderCategoryButtons = ({ categories, selectedCategory, onSelectCa
   }
   return null
 }
+
+export CategoryButtons
 
 export const MarketHome: React.FC<Props> = (props: Props) => {
   const {
@@ -505,7 +506,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
 
   return (
     <>
-      {renderCategoryButtons()}
+      <CategoryButtons categories={categories} onSelectCategory={setCategory} />
       <InfoCardsOverview>
         <InfoCard
           style={{
