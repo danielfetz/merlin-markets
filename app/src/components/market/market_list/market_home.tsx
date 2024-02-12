@@ -32,12 +32,12 @@ import { Search } from './search'
 
 const InfoCardsOverview = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(322.667px, 1fr));
   gap: 16px;
   overflow-x: scroll;
   max-width: 100%;
 
-  @media (max-width: ${props => props.theme.themeBreakPoints.xl}) {
+  @media (max-width: 1060px) {
     grid-template-columns: repeat(3, 290px);
     scroll-padding-left: 2.5rem;
     scroll-padding-right: 2.5rem;
