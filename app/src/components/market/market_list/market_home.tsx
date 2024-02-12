@@ -30,9 +30,7 @@ import { ListItem } from '../common_sections/list/list_item'
 import { AdvancedFilters } from './advanced_filters'
 import { Search } from './search'
 
-const CategoryButton = styled(ButtonRound)<{
-  isSelected: boolean
-}>`
+const CategoryButton = styled(ButtonRound)<Props>`
   margin: 5px;
   padding: 5px 10px;
   background-color: ${({ isSelected, theme }) => (isSelected ? theme.colors.secondary : theme.colors.primary)};
