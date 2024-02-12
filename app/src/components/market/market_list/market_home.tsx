@@ -462,7 +462,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
 
   // Function to handle category selection
   const handleCategorySelect = (selectedCategory: string) => {
-    setCategory(selectedCategory);
+    setCategory(selectedCategory)
     // Include any other logic you need to run when a category is selected
   }
 
