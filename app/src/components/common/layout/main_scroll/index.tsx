@@ -8,7 +8,7 @@ const MainScrollStyled = styled.div`
   flex-grow: 1;
   align-items: center;
   padding-bottom: 15px;
-  padding-top: 64px;
+  padding-top: 41px;
   position: relative;
   z-index: 2;
   padding-left: ${props => props.theme.paddings.mainPadding};
