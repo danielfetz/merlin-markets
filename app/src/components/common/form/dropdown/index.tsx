@@ -26,7 +26,7 @@ const DropdownOpenCSS = css`
   &,
   &:hover {
     background: ${props => props.theme.colors.mainBodyBackground};
-    border-color: ${props => props.theme.dropdown.buttonBorderColorHover};
+    border-color: ${props => props.theme.dropdown.buttonBorderColorActive};
     z-index: 12345;
   }
   .chevronUp {
@@ -40,7 +40,7 @@ const DropdownOpenCSS = css`
 const DropdownVariantCardOpenCSS = css`
   &,
   &:hover {
-    border-color: ${props => props.theme.textfield.borderColorActive};
+    border-color: ${props => props.theme.textfield.borderColorHover};
     z-index: 12345;
   }
   .chevronUp {
