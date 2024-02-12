@@ -7,6 +7,9 @@ import styled, { css } from 'styled-components'
 import { Logo, STANDARD_DECIMALS } from '../../../../common/constants'
 import { useConnectedWeb3Context } from '../../../../contexts'
 import { networkIds } from '../../../../util/networks'
+
+import { RemoteData } from '../../../util/remote_data'
+
 import { bigNumberToString } from '../../../../util/tools/formatting'
 import { ExchangeType } from '../../../../util/types'
 import { Button, ButtonCircle, ButtonRound } from '../../../button'
