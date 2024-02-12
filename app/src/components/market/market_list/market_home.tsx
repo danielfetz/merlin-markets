@@ -31,7 +31,7 @@ import { AdvancedFilters } from './advanced_filters'
 import { Search } from './search'
 
 const TopContents = styled.div`
-  padding: 24px;
+  padding: 24px 0px;
 `
 
 const FiltersWrapper = styled.div`
