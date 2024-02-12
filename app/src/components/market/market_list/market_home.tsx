@@ -304,7 +304,7 @@ const CategoryButtons = ({ categories, onSelectCategory }) => {
   return null
 }
 
-export CategoryButtons
+export { CategoryButtons }
 
 export const MarketHome: React.FC<Props> = (props: Props) => {
   const {
