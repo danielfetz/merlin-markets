@@ -7,11 +7,11 @@ import styled, { css } from 'styled-components'
 import { Logo, STANDARD_DECIMALS } from '../../../../common/constants'
 import { useConnectedWeb3Context } from '../../../../contexts'
 import { networkIds } from '../../../../util/networks'
-import { RemoteData } from '../../../../util/remote_data'
 import { bigNumberToString } from '../../../../util/tools/formatting'
-import { CategoryDataItem, ExchangeType } from '../../../../util/types'
+import { ExchangeType } from '../../../../util/types'
 import { Button, ButtonCircle, ButtonRound } from '../../../button'
 import { ButtonType } from '../../../button/button_styling_types'
+import { renderCategoryButtons } from '../../../market/market_list/market_home.tsx'
 import {
   ModalConnectWalletWrapper,
   ModalDepositWithdrawWrapper,
@@ -165,16 +165,6 @@ const HeaderDropdown = styled(Dropdown)`
   height: 40px;
 `
 
-const CategoryButton = styled(ButtonRound)<{ isSelected: boolean }>`
-  margin: 5px;
-  padding: 5px 10px;
-  background-color: ${({ isSelected, theme }) => (isSelected ? theme.colors.secondary : theme.colors.primary)};
-  color: ${({ theme }) => theme.colors.textColorDark};
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.secondary}; // Adjust this as needed
-  }
-`
-
 const MarketAndGovernanceNav = styled.div<{ disabled?: boolean }>`
   display: none;
   background-color: ${props => (props.disabled ? props => props.theme.buttonSecondary.backgroundColor : 'transparent')};
@@ -196,17 +186,13 @@ const OmenIconWrapper = styled.div`
   margin-left: 12px;
 `
 
-interface Props {
-  categories: RemoteData<CategoryDataItem[]>
-}
-
 const HeaderContainer: React.FC = (props: any) => {
   const context = useConnectedWeb3Context()
 
   const { relay, toggleRelay } = context
   const { account, active, connectorName, error, networkId } = context.rawWeb3Context
 
-  const { categories, currentFilter, history, ...restProps } = props
+  const { history, ...restProps } = props
   const [isConnectWalletModalOpen, setConnectWalletModalState] = useState(false)
   const [isYourConnectionModalOpen, setYourConnectionModalState] = useState(false)
   const [isDepositWithdrawModalOpen, setDepositWithdrawModalState] = useState(false)
@@ -216,8 +202,6 @@ const HeaderContainer: React.FC = (props: any) => {
 
   const hasRouter = props.history !== undefined
   const disableConnectButton = isConnectWalletModalOpen
-
-  const [category, setCategory] = useState(currentFilter.category)
 
   const {
     arrayOfClaimableTokenBalances,
@@ -257,38 +241,6 @@ const HeaderContainer: React.FC = (props: any) => {
       ),
     },
   ]
-
-  // State to track the selected category
-  const [selectedCategory, setSelectedCategory] = useState<string>('All')
-
-  // Function to handle category selection
-  const handleCategorySelect = (category: string) => {
-    setCategory(category) // This sets the category for filtering
-    setSelectedCategory(category) // This updates the state to highlight the button
-  }
-
-  // Render category buttons with conditional styling
-  const renderCategoryButtons = () => {
-    if (RemoteData.hasData(categories)) {
-      return (
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', marginTop: '10px' }}>
-          <CategoryButton isSelected={'All' === selectedCategory} onClick={() => handleCategorySelect('All')}>
-            All Categories
-          </CategoryButton>
-          {categories.data.map((item: CategoryDataItem) => (
-            <CategoryButton
-              isSelected={item.id === selectedCategory}
-              key={item.id}
-              onClick={() => handleCategorySelect(item.id)}
-            >
-              {item.id}
-            </CategoryButton>
-          ))}
-        </div>
-      )
-    }
-    return null
-  }
 
   const logout = () => {
     if (active || (error && connectorName)) {
