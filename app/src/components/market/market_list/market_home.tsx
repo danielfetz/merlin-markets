@@ -33,7 +33,7 @@ import { Search } from './search'
 const CategoryButton = styled(ButtonRound)`
   margin: 5px;
   padding: 5px 10px;
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ isSelected, theme }) => isSelected ? theme.colors.secondary : theme.colors.primary};
   color: ${({ theme }) => theme.colors.textColorDark};
   &:hover {
     background-color: ${({ theme }) => theme.colors.secondary}; // Adjust this as needed
@@ -461,20 +461,32 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
     }
   })
 
+  // State to track the selected category
+  const [selectedCategory, setSelectedCategory] = useState<string>('All')
+
   // Function to handle category selection
-  const handleCategorySelect = (selectedCategory: string) => {
-    setCategory(selectedCategory)
-    // Include any other logic you need to run when a category is selected
+  const handleCategorySelect = (category: string) => {
+    setCategory(category); // This sets the category for filtering
+    setSelectedCategory(category); // This updates the state to highlight the button
   }
 
-  // Render category buttons instead of a dropdown
+  // Render category buttons with conditional styling
   const renderCategoryButtons = () => {
     if (RemoteData.hasData(categories)) {
       return (
-        <div>
-          <CategoryButton onClick={() => handleCategorySelect('All')}>All Categories</CategoryButton>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', marginTop: '10px' }}>
+          <CategoryButton 
+            onClick={() => handleCategorySelect('All')}
+            isSelected={'All' === selectedCategory}
+          >
+            All Categories
+          </CategoryButton>
           {categories.data.map((item: CategoryDataItem) => (
-            <CategoryButton key={item.id} onClick={() => handleCategorySelect(item.id)}>
+            <CategoryButton 
+              key={item.id} 
+              onClick={() => handleCategorySelect(item.id)}
+              isSelected={item.id === selectedCategory}
+            >
               {item.id}
             </CategoryButton>
           ))}
