@@ -289,7 +289,7 @@ const CategoryButtons = ({ categories, onSelectCategory }) => {
         <CategoryButton isSelected={'All' === selectedCategory} onClick={() => handleCategorySelect('All')}>
           All Categories
         </CategoryButton>
-        {categories.data.map((item) => (
+        {categories.data.map(item => (
           <CategoryButton
             isSelected={item.id === selectedCategory}
             key={item.id}
