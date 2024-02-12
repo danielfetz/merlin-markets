@@ -29,7 +29,7 @@ import { MarketMakerDataItem, Token } from '../../../../../util/types'
 import { IconApySmall } from '../../../../common/icons'
 
 const Wrapper = styled(NavLink)`
-  border-bottom: 1px solid ${props => props.theme.borders.borderColor};
+  border-bottom: 1px solid #efeff9;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -37,7 +37,6 @@ const Wrapper = styled(NavLink)`
   text-decoration: none;
   background: white;
   border-radius: 18px;
-  box-shadow: 0 1px 1px #0000000d;
   min-height: 200px;
   justify-content: space-between;
 
