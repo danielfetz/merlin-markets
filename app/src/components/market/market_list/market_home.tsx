@@ -278,10 +278,10 @@ const CategoryButtons = ({ categories, onSelectCategory }) => {
   const [selectedCategory, setSelectedCategory] = useState('All') // Moved inside the component
 
   // Function to handle category selection, now inside the component
-  const handleCategorySelect = (category) => {
+  const handleCategorySelect = category => {
     onSelectCategory(category) // Assuming onSelectCategory is a prop function to update the parent component
     setSelectedCategory(category) // This updates the state to highlight the button
-  };
+  }
 
   if (RemoteData.hasData(categories)) {
     return (
@@ -289,7 +289,7 @@ const CategoryButtons = ({ categories, onSelectCategory }) => {
         <CategoryButton isSelected={'All' === selectedCategory} onClick={() => handleCategorySelect('All')}>
           All Categories
         </CategoryButton>
-        {categories.data.map((item) => (
+        {categories.data.map(item) => (
           <CategoryButton
             isSelected={item.id === selectedCategory}
             key={item.id}
@@ -304,7 +304,7 @@ const CategoryButtons = ({ categories, onSelectCategory }) => {
   return null
 }
 
-export { CategoryButtons }
+export CategoryButtons
 
 export const MarketHome: React.FC<Props> = (props: Props) => {
   const {
