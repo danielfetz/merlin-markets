@@ -158,36 +158,8 @@ const MarketsDropdown = styled(Dropdown)`
   width: 100%;
 `
 
-const MarketsTypeDropdown = styled(Dropdown)`
-  width: 100%;
-`
-
 const MarketsFilterDropdown = styled(Dropdown)`
   width: 100%;
-`
-
-const Actions = styled.div`
-  margin: 0 auto 25px;
-  max-width: 100%;
-  width: ${props => props.theme.mainContainer.maxWidth};
-  > div:first-child {
-    margin-bottom: 14px;
-  }
-  > div:nth-child(2) {
-    margin-bottom: 14px;
-  }
-  @media (min-width: ${props => props.theme.themeBreakPoints.md}) {
-    display: flex;
-    justify-content: space-evenly;
-    > div:first-child {
-      margin-right: 14px;
-      margin-bottom: 0;
-    }
-    > div:nth-child(2) {
-      margin-right: 14px;
-      margin-bottom: 0;
-    }
-  }
 `
 
 const BottomContents = styled.div`
@@ -476,13 +448,6 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
     return {
       content: <CustomDropdownItem>{item.title}</CustomDropdownItem>,
       secondaryText: count > 0 && count.toString(),
-      onClick: item.onClick,
-    }
-  })
-
-  const marketTypeItems: Array<DropdownItemProps> = marketTypes.map(item => {
-    return {
-      content: <CustomDropdownItem>{item.title} Markets</CustomDropdownItem>,
       onClick: item.onClick,
     }
   })
