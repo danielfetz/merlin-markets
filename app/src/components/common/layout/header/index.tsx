@@ -11,7 +11,7 @@ import { bigNumberToString } from '../../../../util/tools/formatting'
 import { ExchangeType } from '../../../../util/types'
 import { Button, ButtonCircle, ButtonRound } from '../../../button'
 import { ButtonType } from '../../../button/button_styling_types'
-import { renderCategoryButtons } from '../../../market/market_list/market_home.tsx'
+import { CategoryButtons } from '../../../market/market_list/market_home.tsx'
 import {
   ModalConnectWalletWrapper,
   ModalDepositWithdrawWrapper,
