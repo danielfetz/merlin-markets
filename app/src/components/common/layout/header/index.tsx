@@ -20,7 +20,7 @@ import {
 import { Dropdown, DropdownItemProps, DropdownPosition } from '../../form/dropdown'
 import { IconAdd, IconClose, IconOmen } from '../../icons'
 import { Network } from '../../network'
-import { renderCategoryButtons } from './src/components/market/market_list/market_home.tsx'
+import { renderCategoryButtons } from '../../../../market/market_list/market_home'
 
 export const HeaderWrapper = styled.div`
   align-items: center;
