@@ -38,16 +38,15 @@ const InfoCardsOverview = styled.div`
   max-width: 100%;
 
   @media (max-width: ${props => props.theme.themeBreakPoints.xl}) {
-    grid-template-columns: repeat(3, 280px);
+    grid-template-columns: repeat(3, 290px);
     scroll-padding-left: 2.5rem;
     scroll-padding-right: 2.5rem;
-    gap: 16px;
+    gap: 10px;
     grid-auto-flow: row;
   }
 `
 
 const InfoCard = styled.div`
-  background: linear-gradient(85deg, rgb(93, 120, 189) 3.16%, rgb(164, 168, 181) 110.87%);
   border-radius: 18px;
   width: 100%;
   justify-content: space-between;
@@ -493,9 +492,9 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
   return (
     <>
       <InfoCardsOverview>
-        <InfoCard />
-        <InfoCard />
-        <InfoCard />
+        <InfoCard background="linear-gradient(85deg, rgb(93, 120, 189) 3.16%, rgb(164, 168, 181) 110.87%)" />
+        <InfoCard background="linear-gradient(to right, rgb(211, 84, 84) 0%, rgb(200, 137, 110) 100%)" />
+        <InfoCard background="linear-gradient(to right, rgb(98, 92, 164) 0%, rgb(140, 117, 205) 100%)" />
       </InfoCardsOverview>
       <ListCard>
         <TopContents>
