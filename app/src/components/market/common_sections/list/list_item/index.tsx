@@ -53,10 +53,10 @@ const Wrapper = styled(NavLink)`
 
 const Title = styled.h2`
   color: ${props => props.theme.colors.textColorDarker};
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.2;
-  margin: 0 0 10px 0;
+  margin: 0 0 16px 0;
 `
 
 const Info = styled.div`
@@ -65,12 +65,14 @@ const Info = styled.div`
   color: ${props => props.theme.colors.textColorLighter};
   display: flex;
   flex-wrap: wrap;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.2;
   overflow-wrap: break-word;
   white-space: normal;
   word-break: break-all;
+  border-top: 1px solid #efeff9;
+  padding-top: 16px;
 `
 
 const Outcome = styled.span`
