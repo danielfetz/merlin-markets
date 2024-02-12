@@ -43,7 +43,7 @@ const InfoCardsOverview = styled.div`
     scroll-padding-right: 2.5rem;
     gap: 16px;
     grid-auto-flow: row;
-  }  
+  }
 `
 
 const InfoCard = styled.div`
