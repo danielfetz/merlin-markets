@@ -258,6 +258,7 @@ export const myMarketsSortOptions = [
 
 interface Props {
   context: ConnectedWeb3Context
+  isSelected: boolean
   count: number
   currentFilter: any
   isFiltering?: boolean
