@@ -11,7 +11,6 @@ import {
   MarketFilters,
   MarketMakerDataItem,
   MarketStates,
-  MarketTypes,
   MarketsSortCriteria,
 } from '../../../util/types'
 import { ButtonRound } from '../../button'
