@@ -196,6 +196,10 @@ const OmenIconWrapper = styled.div`
   margin-left: 12px;
 `
 
+interface Props {
+  categories: RemoteData<CategoryDataItem[]>
+}
+
 const HeaderContainer: React.FC = (props: any) => {
   const context = useConnectedWeb3Context()
 
