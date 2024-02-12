@@ -35,6 +35,9 @@ const CategoryButton = styled(ButtonRound)`
   padding: 5px 10px;
   background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.textColorDark};
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.secondary}; // Adjust this as needed
+  }
 `
 
 const InfoCardsOverview = styled.div`
