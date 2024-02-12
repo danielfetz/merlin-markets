@@ -475,14 +475,14 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
     if (RemoteData.hasData(categories)) {
       return (
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', marginTop: '10px' }}>
-          <CategoryButton onClick={() => handleCategorySelect('All')} isSelected={'All' === selectedCategory}>
+          <CategoryButton isSelected={'All' === selectedCategory} onClick={() => handleCategorySelect('All')}>
             All Categories
           </CategoryButton>
           {categories.data.map((item: CategoryDataItem) => (
-            <CategoryButton 
-              key={item.id} 
-              onClick={() => handleCategorySelect(item.id)}
+            <CategoryButton
               isSelected={item.id === selectedCategory}
+              key={item.id}
+              onClick={() => handleCategorySelect(item.id)}
             >
               {item.id}
             </CategoryButton>
