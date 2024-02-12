@@ -524,15 +524,6 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
               </ButtonSearchStyled>
             </FiltersLeftWrapper>
             <FiltersControls>
-              <MarketsDropdown
-                currentItem={
-                  RemoteData.hasData(categories) ? categories.data.findIndex(i => i.id === decodeURI(category)) + 1 : 0
-                }
-                dirty={true}
-                dropdownDirection={DropdownDirection.downwards}
-                dropdownVariant={DropdownVariant.card}
-                items={categoryItems}
-              />
               <MarketsFilterDropdown
                 currentItem={filters.findIndex(i => i.state === state)}
                 dirty={true}
