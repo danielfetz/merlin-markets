@@ -35,6 +35,7 @@ const InfoCardsOverview = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 16px;
   overflow-x: scroll;
+  max-width: 100%;
 `
 
 const InfoCard = styled.div`
