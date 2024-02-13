@@ -535,6 +535,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
               <ButtonSearchStyled active={showSearch} onClick={toggleSearch}>
                 <IconSearch />
               </ButtonSearchStyled>
+              <Search onChange={setTitle} value={title} />
             </FiltersLeftWrapper>
             <FiltersControls>
               <MarketsFilterDropdown
@@ -558,7 +559,6 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
           </FiltersWrapper>
           {renderCategoryButtons()}
         </TopContents>
-        {showSearch && <Search onChange={setTitle} value={title} />}
         {showAdvancedFilters && (
           <AdvancedFilters
             arbitrator={arbitrator}
