@@ -35,7 +35,7 @@ export function colors(darkMode: boolean): Colors {
 
 export const theme = {
   fonts: {
-    defaultSize: '16px',
+    defaultSize: '14px',
     defaultLineHeight: '16px',
     fontFamily: `'Nunito', sans-serif`,
     fontFamilyCode: `source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace`,
@@ -111,7 +111,7 @@ export const theme = {
   },
   buttonRound: {
     borderRadius: '16px',
-    fontSize: '14px',
+    fontSize: '16px',
     height: '40px',
     lineHeight: '16px',
     padding: '12px 17px',
@@ -207,14 +207,14 @@ export const theme = {
     borderStyle: 'solid',
     borderWidth: '1px',
     color: '#37474F',
-    fontSize: '14px',
+    fontSize: '16px',
     fontWeight: '500',
     height: '40px',
     outline: 'none',
     paddingHorizontal: '20px',
     paddingVertical: '12px',
     placeholderColor: '#86909E',
-    placeholderFontSize: '14px',
+    placeholderFontSize: '16px',
     placeholderFontWeight: '400',
   },
   mainContainer: {
@@ -454,7 +454,7 @@ export const TYPE = {
       <TextWrapper
         {...restProps}
         style={{
-          fontSize: '14px',
+          fontSize: '16px',
           fontWeight: 500,
           letterSpacing: '0.2px',
           lineHeight: '18px',
