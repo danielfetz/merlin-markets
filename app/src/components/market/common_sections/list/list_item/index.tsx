@@ -75,6 +75,7 @@ const Info = styled.div`
 
 const Outcome = styled.span`
   color: ${props => props.theme.colors.primaryLight};
+  font-weight: bold;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
