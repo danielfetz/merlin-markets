@@ -27,6 +27,7 @@ export const Wrapper = styled.button<{ active?: boolean }>`
   outline: none;
   padding: ${props => props.theme.buttonRound.padding};
   font-family: Nunito;
+  font-weight: 800;
   font-size: ${props => props.theme.buttonRound.fontSize};
   line-height: ${props => props.theme.buttonRound.lineHeight};
   color: ${({ theme }) => theme.colors.textColorDark};
