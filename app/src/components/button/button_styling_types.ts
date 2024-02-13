@@ -145,7 +145,6 @@ export const ButtonCSS = css`
   text-align: center;
   user-select: none;
   white-space: nowrap;
-  font-family: Nunito;
 
   ${props => getButtonTypeStyles((props as any).buttonType)}
 `
