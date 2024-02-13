@@ -37,7 +37,7 @@ export const theme = {
   fonts: {
     defaultSize: '14px',
     defaultLineHeight: '16px',
-    fontFamily: `'Roboto', 'Helvetica Neue', 'Arial', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', '-apple-system', 'BlinkMacSystemFont', sans-serif`,
+    fontFamily: `'Nunito', sans-serif`,
     fontFamilyCode: `source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace`,
   },
   buttonPrimary: {
