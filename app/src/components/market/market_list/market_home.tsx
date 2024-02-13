@@ -31,7 +31,7 @@ import { AdvancedFilters } from './advanced_filters'
 import { Search } from './search'
 
 const CategoryButton = styled(ButtonRound)<{ isSelected: boolean }>`
-  background-color: ${({ isSelected, theme }) => (isSelected ? theme.colors.secondary : #fdfdfc)};
+  background-color: ${({ isSelected, theme }) => (isSelected ? theme.colors.secondary : '#fdfdfc')};
   opacity: ${({ isSelected }) => (isSelected ? 1 : 0.5)};
   color: ${({ theme }) => theme.colors.textColorDark};
   border: 2px dashed #ddd;
