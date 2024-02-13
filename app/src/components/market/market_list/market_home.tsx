@@ -41,11 +41,15 @@ const CategoryButton = styled(ButtonRound)<{ isSelected: boolean }>`
 `
 
 const InfoCardsOverview = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(322.667px, 1fr));
-  gap: 16px;
-  overflow-x: scroll;
   max-width: 100%;
+  display: grid;
+  overflow-x: scroll;
+  width: 1000px;
+  grid-template-columns: repeat(5, 295px);
+  scroll-padding-left: 2.5rem;
+  scroll-padding-right: 2.5rem;
+  gap: 12px;
+  grid-auto-flow: row;
 
   @media (max-width: 1059px) {
     grid-template-columns: repeat(3, 290px);
@@ -512,6 +516,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
           }}
         />
         <InfoCard style={{ background: 'linear-gradient(to right, rgb(211, 84, 84) 0%, rgb(200, 137, 110) 100%)' }} />
+        <InfoCard style={{ background: 'linear-gradient(to right, rgb(98, 92, 164) 0%, rgb(140, 117, 205) 100%)' }} />
         <InfoCard style={{ background: 'linear-gradient(to right, rgb(98, 92, 164) 0%, rgb(140, 117, 205) 100%)' }} />
       </InfoCardsOverview>
       <ListCard>
