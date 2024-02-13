@@ -45,18 +45,19 @@ const InfoCardsOverview = styled.div`
   display: grid;
   overflow-x: scroll;
   width: 1000px;
-  grid-template-columns: repeat(5, 295px);
+  padding-bottom: 24px;
   scroll-padding-left: 2.5rem;
   scroll-padding-right: 2.5rem;
-  gap: 12px;
   grid-auto-flow: row;
 
+  @media (min-width: 1060px) {
+    grid-template-columns: repeat(4, 295px);
+    gap: 12px;
+  }
+
   @media (max-width: 1059px) {
-    grid-template-columns: repeat(3, 290px);
-    scroll-padding-left: 2.5rem;
-    scroll-padding-right: 2.5rem;
+    grid-template-columns: repeat(4, 290px);
     gap: 10px;
-    grid-auto-flow: row;
   }
 `
 
