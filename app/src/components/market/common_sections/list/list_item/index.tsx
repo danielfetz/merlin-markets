@@ -52,8 +52,8 @@ const Wrapper = styled(NavLink)`
 
 const Title = styled.h2`
   color: ${props => props.theme.colors.textColorDarker};
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 600;
   line-height: 1.2;
   margin: 0 0 16px 0;
 `
