@@ -31,10 +31,9 @@ import { AdvancedFilters } from './advanced_filters'
 import { Search } from './search'
 
 const CategoryButton = styled(ButtonRound)<{ isSelected: boolean }>`
-  margin: 5px;
-  padding: 5px 10px;
   background-color: ${({ isSelected, theme }) => (isSelected ? theme.colors.secondary : theme.colors.primary)};
   color: ${({ theme }) => theme.colors.textColorDark};
+  border: 2px dashed #ddd;
   &:hover {
     background-color: ${({ theme }) => theme.colors.secondary}; // Adjust this as needed
   }
@@ -476,7 +475,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
       return (
         <div style={{ display: 'flex', overflow: 'scroll', gap: '10px' }}>
           <CategoryButton isSelected={'All' === selectedCategory} onClick={() => handleCategorySelect('All')}>
-            All Categories
+            All categories
           </CategoryButton>
           {categories.data.map((item: CategoryDataItem) => (
             <CategoryButton
