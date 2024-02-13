@@ -129,7 +129,7 @@ const FilterBadgeLabel = styled.span`
 const ButtonFilterStyled = styled(ButtonRoundStyled as any)`
   padding: 0 17px;
   span {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 16px;
   }
   & > * + * {
