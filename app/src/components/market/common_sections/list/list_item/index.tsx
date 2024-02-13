@@ -59,13 +59,12 @@ const Title = styled.h2`
 `
 
 const Info = styled.div`
-  font-family: 'Roboto';
   align-items: center;
   color: ${props => props.theme.colors.textColorLighter};
   display: flex;
   flex-wrap: wrap;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 600;
   line-height: 1.2;
   overflow-wrap: break-word;
   white-space: normal;
