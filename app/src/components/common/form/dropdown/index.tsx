@@ -139,8 +139,8 @@ const CurrentItem = styled.div`
   display: flex;
   flex-grow: 1;
   flex-shrink: 0;
-  font-size: 14px;
-  font-weight: normal;
+  font-size: 16px;
+  font-weight: 800;
   height: 22px;
   line-height: 1.2;
   margin: 0;
