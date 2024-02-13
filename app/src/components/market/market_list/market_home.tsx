@@ -474,7 +474,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
   const renderCategoryButtons = () => {
     if (RemoteData.hasData(categories)) {
       return (
-        <div style={{ display: 'flex', overflow: 'scroll', gap: '10px' }}>
+        <div style={{ display: 'flex', overflow: 'scroll', gap: '10px', padding: '10px 0px 16px 0px' }}>
           <CategoryButton isSelected={'All' === selectedCategory} onClick={() => handleCategorySelect('All')}>
             All categories
           </CategoryButton>
