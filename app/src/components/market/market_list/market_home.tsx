@@ -32,6 +32,7 @@ import { Search } from './search'
 
 const CategoryButton = styled(ButtonRound)<{ isSelected: boolean }>`
   background-color: ${({ isSelected, theme }) => (isSelected ? theme.colors.secondary : theme.colors.primary)};
+  opacity: ${({ isSelected, theme }) => (isSelected ? 1 : 0.5)};
   color: ${({ theme }) => theme.colors.textColorDark};
   border: 2px dashed #ddd;
   &:hover {
