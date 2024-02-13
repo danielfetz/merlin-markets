@@ -135,7 +135,7 @@ export const ButtonCSS = css`
   display: flex;
   font-size: ${({ theme }) => theme.fonts.defaultSize};
   line-height: ${({ theme }) => theme.fonts.defaultLineHeight};
-  font-weight: 400;
+  font-weight: 800;
   height: 40px;
   justify-content: center;
   letter-spacing: 0.2px;
@@ -145,7 +145,6 @@ export const ButtonCSS = css`
   text-align: center;
   user-select: none;
   white-space: nowrap;
-  font-family: Roboto;
 
   ${props => getButtonTypeStyles((props as any).buttonType)}
 `
