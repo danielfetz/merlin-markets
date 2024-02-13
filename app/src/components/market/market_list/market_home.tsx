@@ -505,7 +505,6 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
 
   return (
     <>
-      {renderCategoryButtons()}
       <InfoCardsOverview>
         <InfoCard
           style={{
@@ -551,6 +550,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
               />
             </FiltersControls>
           </FiltersWrapper>
+          {renderCategoryButtons()}
         </TopContents>
         {showSearch && <Search onChange={setTitle} value={title} />}
         {showAdvancedFilters && (
