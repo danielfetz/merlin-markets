@@ -20,7 +20,7 @@ export function colors(darkMode: boolean): Colors {
     primary4: darkMode ? '' : '#E8EAF6',
 
     //other
-    white: darkMode ? '' : '#f8f8f8',
+    white: darkMode ? '' : '#fbfaf8',
     profit: darkMode ? '' : '#4B9E98',
     alert: darkMode ? '' : '#E57373',
     link: darkMode ? '' : '#1E88E5',
