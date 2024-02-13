@@ -65,7 +65,7 @@ const InfoCard = styled.div`
 `
 
 const TopContents = styled.div`
-  padding: 24px 0px;
+  padding: 0px;
 `
 
 const FiltersWrapper = styled.div`
