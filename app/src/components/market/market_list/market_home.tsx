@@ -517,7 +517,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
                 ) : (
                   <IconFilter />
                 )}
-                <span>🦴 Filters</span>
+                <span><span aria-label="filtersemoji" role="img">🦴</span> Filters</span>
               </ButtonFilterStyled>
               <Search onChange={setTitle} value={title} />
             </FiltersLeftWrapper>
