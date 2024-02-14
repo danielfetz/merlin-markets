@@ -215,7 +215,7 @@ export const theme = {
     paddingVertical: '12px',
     placeholderColor: '#86909E',
     placeholderFontSize: '16px',
-    placeholderFontWeight: '400',
+    placeholderFontWeight: '800',
   },
   mainContainer: {
     maxWidth: '1000px',
