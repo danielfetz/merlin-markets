@@ -298,7 +298,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
   const [sortIndex, setSortIndex] = useState(currentFilter.sortIndex)
   const [sortBy, setSortBy] = useState<Maybe<MarketsSortCriteria>>(currentFilter.sortBy)
   const [sortByDirection, setSortByDirection] = useState<'asc' | 'desc'>(currentFilter.sortByDirection)
-  const [showSearch, setShowSearch] = useState<boolean>(currentFilter.title.length > 0 ? true : false)
+  const [setShowSearch] = useState<boolean>(currentFilter.title.length > 0 ? true : false)
   const [showAdvancedFilters, setShowAdvancedFilters] = useState<boolean>(
     currentFilter.currency || currentFilter.arbitrator || currentFilter.curationSource !== CurationSource.ALL_SOURCES,
   )
