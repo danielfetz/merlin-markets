@@ -211,17 +211,17 @@ const FiltersLeftWrapper = styled.div`
 
 export const sortOptions = [
   {
-    title: '24h volume',
+    title: '💸 24h volume',
     sortBy: `sort24HourVolume${Math.floor(Date.now() / (1000 * 60 * 60)) % 24}` as MarketsSortCriteria,
     direction: 'desc',
   },
   {
-    title: 'Total volume',
+    title: '💰 Total volume',
     sortBy: 'usdVolume',
     direction: 'desc',
   },
   {
-    title: 'Highest liquidity',
+    title: '💧 Highest liquidity',
     sortBy: 'usdLiquidityParameter',
     direction: 'desc',
   },
