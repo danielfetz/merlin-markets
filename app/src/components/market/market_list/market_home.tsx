@@ -313,7 +313,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
   const filters = [
     {
       state: MarketStates.open,
-      title: 'Open',
+      title: '🕛 Open',
       active: state === MarketStates.open,
       onClick: () => {
         setState(MarketStates.open)
