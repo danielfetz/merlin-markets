@@ -207,7 +207,6 @@ export const theme = {
     borderStyle: 'solid',
     borderWidth: '1px',
     color: '#37474F',
-    fontFamily: `'Nunito', sans-serif`,
     fontSize: '16px',
     fontWeight: '800',
     height: '40px',
