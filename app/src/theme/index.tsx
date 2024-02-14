@@ -110,7 +110,7 @@ export const theme = {
     dimensions: '40px',
   },
   buttonRound: {
-    borderRadius: '16px',
+    borderRadius: '100px',
     fontSize: '16px',
     height: '40px',
     lineHeight: '16px',
