@@ -22,7 +22,6 @@ import {
   DropdownVariant,
 } from '../../common/form/dropdown'
 import { IconFilter } from '../../common/icons/IconFilter'
-import { IconSearch } from '../../common/icons/IconSearch'
 import { InlineLoading } from '../../loading'
 import { ListCard } from '../common_sections/list/list_card'
 import { ListItem } from '../common_sections/list/list_item'
@@ -110,11 +109,6 @@ const ButtonRoundStyled = styled(ButtonRound)<{
         ? 'invert(46%) sepia(0%) saturate(1168%) hue-rotate(183deg) brightness(99%) contrast(89%)'
         : 'none'};
   }
-`
-
-const ButtonSearchStyled = styled(ButtonRoundStyled as any)`
-  width: 40px;
-  padding: 0;
 `
 
 const FilterBadgeLabel = styled.span`
@@ -425,11 +419,6 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
     }
   }, [currentFilter, fetchMyMarkets])
 
-  const toggleSearch = useCallback(() => {
-    setShowAdvancedFilters(false)
-    setShowSearch(!showSearch)
-  }, [showSearch])
-
   const toggleFilters = useCallback(() => {
     setShowSearch(false)
     setShowAdvancedFilters(!showAdvancedFilters)
@@ -532,9 +521,6 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
                 )}
                 <span>Filters</span>
               </ButtonFilterStyled>
-              <ButtonSearchStyled active={showSearch} onClick={toggleSearch}>
-                <IconSearch />
-              </ButtonSearchStyled>
               <Search onChange={setTitle} value={title} />
             </FiltersLeftWrapper>
             <FiltersControls>
