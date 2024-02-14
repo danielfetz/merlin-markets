@@ -5,7 +5,6 @@ import { Textfield } from '../../../common'
 import { IconSearchGrey } from '../../../common/icons'
 
 const Wrapper = styled.div`
-  margin: 0 25px 24px 25px;
   position: relative;
   svg {
     position: absolute;
@@ -16,7 +15,7 @@ const Wrapper = styled.div`
 
 const SearchTextField = styled(Textfield)`
   height: 40px;
-  border-radius: 8px;
+  border-radius: 100px;
   padding-left: 45px;
 `
 
@@ -31,7 +30,7 @@ export const Search = (props: Props) => {
   return (
     <Wrapper>
       <IconSearchGrey />
-      <SearchTextField onChange={e => onChange(e.target.value)} placeholder="Search Market" value={value} />
+      <SearchTextField onChange={e => onChange(e.target.value)} placeholder="Search markets" value={value} />
     </Wrapper>
   )
 }
