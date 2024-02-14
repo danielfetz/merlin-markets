@@ -517,8 +517,8 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
                 ) : (
                   <IconFilter />
                 )}
-                <span style={{ gap: '4.5px' }}>
-                  <span aria-label="filtersemoji" role="img">
+                <span>
+                  <span aria-label="filtersemoji" role="img" style={{ marginRight: '4.5px' }}>
                     🦴
                   </span>
                   Filters
