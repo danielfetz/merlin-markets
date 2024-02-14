@@ -520,7 +520,8 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
                 <span>
                   <span aria-label="filtersemoji" role="img">
                     🦴
-                  </span>{"·"}
+                  </span>
+                  {"·"}
                   Filters
                 </span>
               </ButtonFilterStyled>
