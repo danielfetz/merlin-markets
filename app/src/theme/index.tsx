@@ -199,7 +199,7 @@ export const theme = {
     mainPadding: '30px',
   },
   textfield: {
-    backgroundColor: 'transparent',
+    backgroundColor: '#fff',
     borderColor: '#DCDFF2',
     borderColorActive: '#9FA8DA',
     borderColorOnHover: '#C5CAE9',
