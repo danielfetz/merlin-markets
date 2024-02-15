@@ -520,7 +520,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
           <ActionInfo>
             <ActionInfoTitle>How Merlin works</ActionInfoTitle>
           </ActionInfo>
-        </InfoCard>  
+        </InfoCard>
         <InfoCard style={{ background: 'linear-gradient(to right, rgb(211, 84, 84) 0%, rgb(200, 137, 110) 100%)' }} />
         <InfoCard style={{ background: 'linear-gradient(to right, rgb(98, 92, 164) 0%, rgb(140, 117, 205) 100%)' }} />
         <InfoCard style={{ background: 'linear-gradient(to right, rgb(98, 92, 164) 0%, rgb(140, 117, 205) 100%)' }} />
