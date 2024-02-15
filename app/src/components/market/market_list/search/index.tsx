@@ -5,6 +5,7 @@ import { Textfield } from '../../../common'
 
 const Wrapper = styled.div`
   position: relative;
+  width: 400px;
   span {
     position: absolute;
     left: 17px;
