@@ -8,15 +8,16 @@ const Wrapper = styled.div`
   span {
     position: absolute;
     left: 17px;
-    top: 10px;
+    top: 8px;
     opacity: 0.5;
+    font-size: 16px;
   }
 `
 
 const SearchTextField = styled(Textfield)`
   height: 40px;
   border-radius: 100px;
-  padding-left: 36px;
+  padding-left: 38px;
 `
 
 interface Props {
