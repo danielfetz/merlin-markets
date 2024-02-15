@@ -2,11 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { Textfield } from '../../../common'
-import { IconSearchGrey } from '../../../common/icons'
 
 const Wrapper = styled.div`
   position: relative;
-  svg {
+  span {
     position: absolute;
     left: 13px;
     top: 9px;
@@ -29,7 +28,9 @@ export const Search = (props: Props) => {
 
   return (
     <Wrapper>
-      <IconSearchGrey />
+      <span aria-label="search" role="img">
+        🔍
+      </span>
       <SearchTextField onChange={e => onChange(e.target.value)} placeholder="Search markets" value={value} />
     </Wrapper>
   )
