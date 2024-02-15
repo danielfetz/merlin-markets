@@ -28,7 +28,6 @@ export const HeaderWrapper = styled.div`
   flex-grow: 0;
   flex-shrink: 0;
   height: 72px;
-  padding: 0 30px;
   justify-content: space-between;
   position: sticky;
   top: 0;
@@ -41,12 +40,10 @@ export const HeaderInner = styled.div`
   flex-direction: row;
   height: 100%;
   justify-content: space-between;
-  margin: 0 auto;
   max-width: 100%;
   padding: 0 24px;
   position: relative;
   width: 100%;
-  margin-top: 32px;
   border-bottom: 1px solid #ececf6;
 `
 
