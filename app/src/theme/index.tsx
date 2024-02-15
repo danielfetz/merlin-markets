@@ -178,7 +178,7 @@ export const theme = {
     sm: '480px',
     xl: '1024px',
     xs: '320px',
-    xxl: '1464px',
+    xxl: '1400px',
   },
   borders: {
     tooltip: '#cfd8dc',
