@@ -21,7 +21,6 @@ import {
   DropdownPosition,
   DropdownVariant,
 } from '../../common/form/dropdown'
-import { IconFilter } from '../../common/icons/IconFilter'
 import { InlineLoading } from '../../loading'
 import { ListCard } from '../common_sections/list/list_card'
 import { ListItem } from '../common_sections/list/list_item'
@@ -515,7 +514,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
                 {advancedFilterSelectedCount > 0 ? (
                   <FilterBadgeLabel>{advancedFilterSelectedCount}</FilterBadgeLabel>
                 ) : (
-                  <IconFilter />
+                  <>
                 )}
                 <span>
                   <span aria-label="filtersemoji" role="img" style={{ marginRight: '4.5px' }}>
