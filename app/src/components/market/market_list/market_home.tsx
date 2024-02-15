@@ -513,7 +513,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
               <ButtonFilterStyled active={showAdvancedFilters} onClick={toggleFilters}>
                 {advancedFilterSelectedCount > 0 && <FilterBadgeLabel>{advancedFilterSelectedCount}</FilterBadgeLabel>}
                 <span>
-                  <span aria-label="filtersemoji" role="img" style={{ marginRight: '4.5px' }}>
+                  <span aria-label="filtersemoji" role="img" style={{ marginRight: '6px' }}>
                     🦴
                   </span>
                   Filters
