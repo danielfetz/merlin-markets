@@ -396,7 +396,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
 const TextWrapper = styled.div<{ color: keyof Colors }>`
   color: ${({ color, theme }) => (theme as any)[color]};
-  font-family: Roboto;
 `
 
 export const TYPE = {
