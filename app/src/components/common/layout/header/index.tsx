@@ -45,6 +45,7 @@ export const HeaderInner = styled.div`
   max-width: 100%;
   padding: 0 24px;
   position: relative;
+  width: 100%;
   background: white;
   border-radius: 22px;
   margin-top: 32px;
