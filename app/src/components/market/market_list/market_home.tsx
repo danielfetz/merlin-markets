@@ -512,7 +512,9 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
             <FiltersLeftWrapper>
               <ButtonFilterStyled active={showAdvancedFilters} onClick={toggleFilters}>
                 {advancedFilterSelectedCount > 0 && (
-                  <FilterBadgeLabel>{advancedFilterSelectedCount}</FilterBadgeLabel>
+                  <FilterBadgeLabel>
+                    {advancedFilterSelectedCount}
+                  </FilterBadgeLabel>
                 )}
                 <span>
                   <span aria-label="filtersemoji" role="img" style={{ marginRight: '4.5px' }}>
