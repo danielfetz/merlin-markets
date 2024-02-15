@@ -516,6 +516,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
           style={{
             background: 'linear-gradient(85deg, rgb(93, 120, 189) 3.16%, rgb(164, 168, 181) 110.87%)',
           }}
+        >
           <ActionInfo>
             <ActionInfoTitle>
               How Merlin works
