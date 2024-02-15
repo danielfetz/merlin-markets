@@ -67,6 +67,21 @@ const InfoCard = styled.div`
   min-height: 200px;
 `
 
+const ActionInfo = styled.div`
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 0;
+`
+
+const ActionInfoTitle = styled.div`
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.3;
+`
+
 const TopContents = styled.div`
   padding: 0px;
 `
@@ -501,7 +516,12 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
           style={{
             background: 'linear-gradient(85deg, rgb(93, 120, 189) 3.16%, rgb(164, 168, 181) 110.87%)',
           }}
-        />
+          <ActionInfo>
+            <ActionInfoTitle>
+              How Merlin works
+            </ActionInfoTitle>
+          </ActionInfo>
+        </InfoCard>  
         <InfoCard style={{ background: 'linear-gradient(to right, rgb(211, 84, 84) 0%, rgb(200, 137, 110) 100%)' }} />
         <InfoCard style={{ background: 'linear-gradient(to right, rgb(98, 92, 164) 0%, rgb(140, 117, 205) 100%)' }} />
         <InfoCard style={{ background: 'linear-gradient(to right, rgb(98, 92, 164) 0%, rgb(140, 117, 205) 100%)' }} />
