@@ -68,6 +68,7 @@ const InfoCard = styled.div`
 
 const ActionInfo = styled.div`
   padding: 20px;
+  color: white;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -75,10 +76,23 @@ const ActionInfo = styled.div`
 `
 
 const ActionInfoTitle = styled.div`
-  color: white;
   font-size: 18px;
   font-weight: 800;
   line-height: 1.3;
+`
+
+const ActionInfoDescription = styled.div`
+  font-size: 15px;
+`
+
+const ActionInfoButton = styled.div`
+  font-size: 15px;
+  font-weight: 700;
+  background: #00000030;
+  padding: 5px 14px;
+  width: fit-content;
+  border-radius: 20px;
+  margin-top: 10px;
 `
 
 const TopContents = styled.div`
@@ -518,6 +532,8 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
         >
           <ActionInfo>
             <ActionInfoTitle>How Merlin works</ActionInfoTitle>
+            <ActionInfoDescription>How can you bet? How will you get paid out?</ActionInfoDescription>
+            <ActionInfoButton>View FAQ</ActionInfoButton>
           </ActionInfo>
         </InfoCard>
         <InfoCard style={{ background: 'linear-gradient(to right, rgb(211, 84, 84) 0%, rgb(200, 137, 110) 100%)' }} />
