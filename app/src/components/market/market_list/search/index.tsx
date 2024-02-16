@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 const SearchTextField = styled(Textfield)`
   height: 40px;
   border-radius: 100px;
-  padding-left: 38px;
+  padding-left: 40px;
 `
 
 interface Props {
