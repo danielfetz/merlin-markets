@@ -538,7 +538,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
         </InfoCard>
         <InfoCard
           style={{
-            background: 'linear-gradient(to right, rgb(211, 84, 84) 0%, rgb(200, 137, 110) 100%))',
+            background: 'linear-gradient(to right, rgb(211, 84, 84) 0%, rgb(200, 137, 110) 100%)',
           }}
         >
           <ActionInfo>
