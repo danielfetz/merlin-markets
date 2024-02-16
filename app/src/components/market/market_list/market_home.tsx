@@ -536,7 +536,17 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
             <ActionInfoButton>View FAQ</ActionInfoButton>
           </ActionInfo>
         </InfoCard>
-        <InfoCard style={{ background: 'linear-gradient(to right, rgb(211, 84, 84) 0%, rgb(200, 137, 110) 100%)' }} />
+        <InfoCard
+          style={{
+            background: 'linear-gradient(to right, rgb(211, 84, 84) 0%, rgb(200, 137, 110) 100%))',
+          }}
+        >
+          <ActionInfo>
+            <ActionInfoTitle>2024 Presidential Election</ActionInfoTitle>
+            <ActionInfoDescription>Who will get elected?</ActionInfoDescription>
+            <ActionInfoButton>Bet now</ActionInfoButton>
+          </ActionInfo>
+        </InfoCard>
         <InfoCard style={{ background: 'linear-gradient(to right, rgb(98, 92, 164) 0%, rgb(140, 117, 205) 100%)' }} />
         <InfoCard style={{ background: 'linear-gradient(87deg, rgb(9, 134, 181) 0%, rgb(7, 208, 124) 100%)' }} />
         <InfoCard style={{ background: 'linear-gradient(87deg, rgb(9, 134, 181) 0%, rgb(7, 208, 124) 100%)' }} />
