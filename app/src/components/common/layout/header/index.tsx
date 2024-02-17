@@ -88,6 +88,8 @@ const ButtonCSS = css`
 
 const ButtonConnectWalletStyled = styled(Button)`
   margin-left: 12px;
+  font-size: 16px;
+  font-family: inherit;
 `
 
 export const ButtonSettings = styled(ButtonRound)`
