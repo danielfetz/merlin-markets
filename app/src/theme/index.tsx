@@ -35,7 +35,7 @@ export function colors(darkMode: boolean): Colors {
 
 export const theme = {
   fonts: {
-    defaultSize: '16x',
+    defaultSize: '15x',
     defaultLineHeight: '16px',
     fontFamily: `'Nunito', sans-serif`,
     fontFamilyCode: `source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace`,
