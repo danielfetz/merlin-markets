@@ -72,8 +72,8 @@ const DropdownVariantPillCSS = css`
 const DropdownVariantCardCSS = css`
   ${CardCSS};
   flex: 1;
-  padding: 8px 16px;
-  border-radius: 16px;
+  padding: 7px 16px;
+  border-radius: 100px;
   background-color: ${props => props.theme.dropdown.buttonBackgroundColor};
   position: relative;
   border: 1px solid ${props => props.theme.dropdown.buttonBorderColor};
