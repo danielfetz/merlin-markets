@@ -46,14 +46,13 @@ export const HeaderInner = styled.div`
   align-items: center;
   display: flex;
   flex-direction: row;
-  height: 100%;
+  height: 72px;
   justify-content: space-between;
   max-width: 100%;
   padding: 0 24px;
   position: relative;
   width: 100%;
   border-bottom: 1px solid #ececf6;
-  min-height: 72px;
 `
 
 export const LogoWrapper = styled.a<{ disabled?: boolean }>`
