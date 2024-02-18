@@ -25,9 +25,10 @@ export const HeaderWrapper = styled.div`
   align-items: center;
   background: ${props => props.theme.header.backgroundColor};
   display: flex;
+  flex-flow: column;
   flex-grow: 0;
   flex-shrink: 0;
-  height: 72px;
+  height: auto;
   justify-content: space-between;
   position: sticky;
   top: 0;
