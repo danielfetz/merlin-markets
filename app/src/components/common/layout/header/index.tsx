@@ -42,10 +42,17 @@ export const AlertInfo = styled.div`
   width: 100%;
 `
 
+export const AlertInfoSpan = styled.div`
+  max-width: 1400px;
+  margin: auto 0;
+  padding: 12px 0;
+`
+
 export const HeaderInner = styled.div`
   align-items: center;
   display: flex;
   flex-direction: row;
+  font-weight: 800;
   height: 72px;
   justify-content: space-between;
   max-width: 100%;
@@ -271,10 +278,10 @@ const HeaderContainer: React.FC = (props: any) => {
   return (
     <HeaderWrapper {...restProps}>
       <AlertInfo>
-        <span>
+        <AlertInfoSpan>
           Merlin is currently only available on desktop with your browser extension wallet (e.g. MetaMask) connected to
           Gnosis Chain. Mobile and Walletconnect support are coming soon. Use at your own risk.
-        </span>
+        </AlertInfoSpan>
       </AlertInfo>
       <HeaderInner>
         <ContentsLeft>
