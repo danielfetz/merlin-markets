@@ -39,15 +39,15 @@ export const AlertInfo = styled.div`
   background: gold;
   min-height: 46px;
   font-size: 15px;
-  font-weight: 800;
+  font-weight: 700;
   width: 100%;
   display: flex;
   padding: 0 32px;
 `
 
 export const AlertInfoSpan = styled.div`
-  max-width: 1400px;
-  margin: auto 0;
+  width: 1400px;
+  margin: 0 auto;
   padding: 12px 0;
 `
 
