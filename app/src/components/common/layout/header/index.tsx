@@ -39,7 +39,10 @@ export const AlertInfo = styled.div`
   background: gold;
   min-height: 46px;
   font-size: 15px;
+  font-weight: 800;
   width: 100%;
+  display: flex;
+  padding: 0 32px;
 `
 
 export const AlertInfoSpan = styled.div`
@@ -52,7 +55,6 @@ export const HeaderInner = styled.div`
   align-items: center;
   display: flex;
   flex-direction: row;
-  font-weight: 800;
   height: 72px;
   justify-content: space-between;
   max-width: 100%;
