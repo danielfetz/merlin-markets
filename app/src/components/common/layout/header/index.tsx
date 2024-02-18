@@ -33,10 +33,13 @@ export const HeaderWrapper = styled.div`
   position: sticky;
   top: 0;
   z-index: 5;
+  min-height: 72px;
 `
 
 export const AlertInfo = styled.div`
   background: gold;
+  min-height: 46px;
+  font-size: 15px;
 `
 
 export const HeaderInner = styled.div`
