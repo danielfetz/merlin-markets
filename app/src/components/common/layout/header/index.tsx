@@ -33,7 +33,6 @@ export const HeaderWrapper = styled.div`
   position: sticky;
   top: 0;
   z-index: 5;
-  min-height: 72px;
 `
 
 export const AlertInfo = styled.div`
@@ -53,6 +52,7 @@ export const HeaderInner = styled.div`
   position: relative;
   width: 100%;
   border-bottom: 1px solid #ececf6;
+  min-height: 72px;
 `
 
 export const LogoWrapper = styled.a<{ disabled?: boolean }>`
