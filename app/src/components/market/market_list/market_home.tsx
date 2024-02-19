@@ -547,7 +547,17 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
             <ActionInfoButton>Bet now</ActionInfoButton>
           </ActionInfo>
         </InfoCard>
-        <InfoCard style={{ background: 'linear-gradient(to right, rgb(98, 92, 164) 0%, rgb(140, 117, 205) 100%)' }} />
+        <InfoCard
+          style={{
+            background: 'linear-gradient(to right, rgb(98, 92, 164) 0%, rgb(140, 117, 205) 100%)',
+          }}
+        >
+          <ActionInfo>
+            <ActionInfoTitle>Ethereum ETF</ActionInfoTitle>
+            <ActionInfoDescription>Approved by June 30?</ActionInfoDescription>
+            <ActionInfoButton>Bet now</ActionInfoButton>
+          </ActionInfo>
+        </InfoCard>
         <InfoCard style={{ background: 'linear-gradient(87deg, rgb(9, 134, 181) 0%, rgb(7, 208, 124) 100%)' }} />
         <InfoCard style={{ background: 'linear-gradient(87deg, rgb(9, 134, 181) 0%, rgb(7, 208, 124) 100%)' }} />
       </InfoCardsOverview>
