@@ -170,7 +170,7 @@ const ButtonFilterStyled = styled(ButtonRoundStyled as any)`
 const ListWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 16px;
+  gap: 12px;
 `
 
 const NoMarketsAvailable = styled.p`
