@@ -281,7 +281,7 @@ const HeaderContainer: React.FC = (props: any) => {
     <HeaderWrapper {...restProps}>
       <AlertInfo>
         <AlertInfoSpan>
-          Merlin is currently only available on desktop with your browser extension wallet (e.g. MetaMask) connected to
+          Merlin is currently only available on desktop with a browser extension wallet (e.g. MetaMask) connected to
           Gnosis Chain. Mobile and Walletconnect support are coming soon. Use at your own risk.
         </AlertInfoSpan>
       </AlertInfo>
