@@ -558,7 +558,17 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
             <ActionInfoButton>Bet now</ActionInfoButton>
           </ActionInfo>
         </InfoCard>
-        <InfoCard style={{ background: 'linear-gradient(87deg, rgb(9, 134, 181) 0%, rgb(7, 208, 124) 100%)' }} />
+        <InfoCard
+          style={{
+            background: 'linear-gradient(87deg, rgb(9, 134, 181) 0%, rgb(7, 208, 124) 100%)',
+          }}
+        >
+          <ActionInfo>
+            <ActionInfoTitle>SafeDAO</ActionInfoTitle>
+            <ActionInfoDescription>Wen token transferable? How many Safes created in 2024?</ActionInfoDescription>
+            <ActionInfoButton>View more</ActionInfoButton>
+          </ActionInfo>
+        </InfoCard>
         <InfoCard style={{ background: 'linear-gradient(87deg, rgb(9, 134, 181) 0%, rgb(7, 208, 124) 100%)' }} />
       </InfoCardsOverview>
       <ListCard>
