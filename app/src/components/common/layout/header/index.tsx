@@ -42,7 +42,7 @@ export const AlertInfo = styled.div`
   font-weight: 700;
   width: 100%;
   display: flex;
-  padding: 0 32px;
+  padding: 0 16px;
 `
 
 export const AlertInfoSpan = styled.div`
