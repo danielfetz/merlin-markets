@@ -21,6 +21,7 @@ import {
   DropdownPosition,
   DropdownVariant,
 } from '../../common/form/dropdown'
+import { IconFilter } from '../../common/icons/IconFilter'
 import { InlineLoading } from '../../loading'
 import { ListCard } from '../common_sections/list/list_card'
 import { ListItem } from '../common_sections/list/list_item'
@@ -576,13 +577,12 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
           <FiltersWrapper>
             <FiltersLeftWrapper>
               <ButtonFilterStyled active={showAdvancedFilters} onClick={toggleFilters}>
-                {advancedFilterSelectedCount > 0 && <FilterBadgeLabel>{advancedFilterSelectedCount}</FilterBadgeLabel>}
-                <span>
-                  <span aria-label="filtersemoji" role="img" style={{ marginRight: '6px' }}>
-                    🎚️
-                  </span>
-                  Filters
-                </span>
+                {advancedFilterSelectedCount > 0 ? (
+                  <FilterBadgeLabel>{advancedFilterSelectedCount}</FilterBadgeLabel>
+                ) : (
+                  <IconFilter />
+                )}
+                <span>Filters</span>
               </ButtonFilterStyled>
               <Search onChange={setTitle} value={title} />
             </FiltersLeftWrapper>
