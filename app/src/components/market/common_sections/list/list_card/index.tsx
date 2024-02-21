@@ -8,6 +8,7 @@ const CardStyled = styled(Card)`
   max-width: 100%;
   min-height: 530px;
   width: ${props => props.theme.mainContainer.maxWidth};
+  background: transparent;
 `
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
