@@ -7,7 +7,7 @@ const MainScrollStyled = styled.div`
   flex-direction: column;
   flex-grow: 1;
   align-items: center;
-  padding: 16px 32px;
+  padding: 16px;
   position: relative;
   z-index: 2;
   @media (min-width: ${props => props.theme.themeBreakPoints.md}) {
