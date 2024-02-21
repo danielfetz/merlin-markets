@@ -159,6 +159,7 @@ export const theme = {
   },
   cards: {
     backgroundColor: 'white',
+    border: '1px solid #efeff9',
     borderRadius: '16px',
     paddingHorizontal: '24px',
     paddingVertical: '20px',
