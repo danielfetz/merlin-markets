@@ -167,7 +167,7 @@ export const theme = {
     titleColor: '#000',
   },
   header: {
-    backgroundColor: 'transparent',
+    backgroundColor: '#fbfaf8',
     boxShadow: 'none',
     height: '66px',
     color: '#37474F',
