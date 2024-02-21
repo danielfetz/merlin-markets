@@ -2,7 +2,7 @@ import React, { HTMLAttributes } from 'react'
 import styled, { css } from 'styled-components'
 
 export const CardCSS = css`
-  background-color: white;
+  background-color: ${props => props.theme.cards.backgroundColor};
   border-radius: ${props => props.theme.cards.borderRadius};
   border: ${props => props.theme.cards.border};
   box-shadow: ${props => props.theme.cards.boxShadow};
