@@ -158,8 +158,8 @@ export const theme = {
     },
   },
   cards: {
-    backgroundColor: 'transparent',
-    borderRadius: '8px',
+    backgroundColor: 'white',
+    borderRadius: '16px',
     paddingHorizontal: '24px',
     paddingVertical: '20px',
     textColor: '#000',
