@@ -23,7 +23,6 @@ import { Network } from '../../network'
 
 export const HeaderWrapper = styled.div`
   align-items: center;
-  background: ${props => props.theme.header.backgroundColor};
   display: flex;
   flex-flow: column;
   flex-grow: 0;
@@ -62,6 +61,7 @@ export const HeaderInner = styled.div`
   position: relative;
   width: 100%;
   border-bottom: 1px solid #ececf6;
+  background: ${props => props.theme.header.backgroundColor};
 `
 
 export const LogoWrapper = styled.a<{ disabled?: boolean }>`
