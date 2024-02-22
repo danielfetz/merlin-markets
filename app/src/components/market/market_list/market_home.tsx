@@ -227,7 +227,6 @@ const BottomContents = styled.div`
 
 const FiltersLeftWrapper = styled.div`
   display: flex;
-  align-items: center;
   & > * + * {
     margin-left: 10px;
   }
