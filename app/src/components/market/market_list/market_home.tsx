@@ -54,7 +54,7 @@ const InfoCardsOverview = styled.div`
   }
 
   @media (max-width: 1059px) {
-    grid-template-columns: repeat(5, 300px);
+    grid-template-columns: repeat(5, 305px);
     gap: 10px;
   }
 `
