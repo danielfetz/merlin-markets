@@ -29,16 +29,6 @@ import { ListItem } from '../common_sections/list/list_item'
 import { AdvancedFilters } from './advanced_filters'
 import { Search } from './search'
 
-const CategoryButton = styled(ButtonRound)<{ isSelected: boolean }>`
-  background-color: ${({ isSelected, theme }) => (isSelected ? theme.colors.secondary : '#fdfdfc')};
-  opacity: ${({ isSelected }) => (isSelected ? 1 : 0.5)};
-  color: ${({ theme }) => theme.colors.textColorDark};
-  border: 2px dashed #ddd;
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.secondary}; // Adjust this as needed
-  }
-`
-
 const InfoCardsOverview = styled.div`
   max-width: 100%;
   display: grid;
@@ -479,37 +469,29 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
     }
   })
 
-  // State to track the selected category
-  const [selectedCategory, setSelectedCategory] = useState<string>('All')
-
-  // Function to handle category selection
-  const handleCategorySelect = (category: string) => {
-    setCategory(category) // This sets the category for filtering
-    setSelectedCategory(category) // This updates the state to highlight the button
-  }
-
-  // Render category buttons with conditional styling
-  const renderCategoryButtons = () => {
-    if (RemoteData.hasData(categories)) {
-      return (
-        <div style={{ display: 'flex', overflow: 'scroll', gap: '10px', padding: '10px 0px 16px 0px' }}>
-          <CategoryButton isSelected={'All' === selectedCategory} onClick={() => handleCategorySelect('All')}>
-            All categories
-          </CategoryButton>
-          {categories.data.map((item: CategoryDataItem) => (
-            <CategoryButton
-              isSelected={item.id === selectedCategory}
-              key={item.id}
-              onClick={() => handleCategorySelect(item.id)}
-            >
-              {item.id}
-            </CategoryButton>
-          ))}
-        </div>
-      )
-    }
-    return null
-  }
+  const categoryItems: Array<DropdownItemProps> =
+    RemoteData.hasData(categories) && categories.data.length > 0
+      ? ([
+          {
+            content: <CustomDropdownItem>{'All Categories'}</CustomDropdownItem>,
+            onClick: () => {
+              setCategory('All')
+            },
+          },
+          ...categories.data.map((item: CategoryDataItem) => {
+            return {
+              content: <CustomDropdownItem>{item.id}</CustomDropdownItem>,
+              onClick: () => {
+                setCategory(item.id)
+              },
+            }
+          }),
+        ] as Array<DropdownItemProps>)
+      : [
+          {
+            content: <CustomDropdownItem>{'All Categories'}</CustomDropdownItem>,
+          },
+        ]
 
   const noOwnMarkets = RemoteData.is.success(markets) && markets.data.length === 0 && state === MarketStates.myMarkets
   const noMarketsAvailable =
@@ -604,7 +586,15 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
               </ButtonFilterStyled>
             </FiltersControls>
           </FiltersWrapper>
-          {renderCategoryButtons()}
+          <MarketsDropdown
+            currentItem={
+              RemoteData.hasData(categories) ? categories.data.findIndex(i => i.id === decodeURI(category)) + 1 : 0
+            }
+            dirty={true}
+            dropdownDirection={DropdownDirection.downwards}
+            dropdownVariant={DropdownVariant.card}
+            items={categoryItems}
+          />
         </TopContents>
         {showAdvancedFilters && (
           <AdvancedFilters
