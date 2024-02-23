@@ -94,7 +94,7 @@ const FiltersWrapper = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
+  flex-direction: row;
 
   @media (min-width: ${props => props.theme.themeBreakPoints.sm}) {
     flex-direction: row;
@@ -205,7 +205,7 @@ const SortDropdown = styled(Dropdown)`
 `
 
 const MarketsDropdown = styled(Dropdown)`
-  width: 100%;
+  width: fit-content;
 `
 
 const MarketsFilterDropdown = styled(Dropdown)`
@@ -563,6 +563,15 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
               <Search onChange={setTitle} value={title} />
             </FiltersLeftWrapper>
             <FiltersControls>
+              <MarketsDropdown
+                currentItem={
+                  RemoteData.hasData(categories) ? categories.data.findIndex(i => i.id === decodeURI(category)) + 1 : 0
+                }
+                dirty={true}
+                dropdownDirection={DropdownDirection.downwards}
+                dropdownVariant={DropdownVariant.card}
+                items={categoryItems}
+              />     
               <MarketsFilterDropdown
                 currentItem={filters.findIndex(i => i.state === state)}
                 dirty={true}
@@ -590,15 +599,6 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
               </ButtonFilterStyled>
             </FiltersControls>
           </FiltersWrapper>
-          <MarketsDropdown
-            currentItem={
-              RemoteData.hasData(categories) ? categories.data.findIndex(i => i.id === decodeURI(category)) + 1 : 0
-            }
-            dirty={true}
-            dropdownDirection={DropdownDirection.downwards}
-            dropdownVariant={DropdownVariant.card}
-            items={categoryItems}
-          />
         </TopContents>
         {showAdvancedFilters && (
           <AdvancedFilters
