@@ -204,6 +204,10 @@ const SortDropdown = styled(Dropdown)`
   min-width: 170px;
 `
 
+const MarketsDropdown = styled(Dropdown)`
+  width: 100%;
+`
+
 const MarketsFilterDropdown = styled(Dropdown)`
   width: 100%;
 `
