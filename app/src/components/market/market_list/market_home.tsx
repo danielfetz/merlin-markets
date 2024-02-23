@@ -94,10 +94,10 @@ const FiltersWrapper = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
+  flex-direction: column;
 
   @media (min-width: ${props => props.theme.themeBreakPoints.sm}) {
-    flex-direction: row;
+    flex-direction: column;
   }
 `
 
