@@ -574,14 +574,6 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
         <TopContents>
           <FiltersWrapper>
             <FiltersLeftWrapper>
-              <ButtonFilterStyled active={showAdvancedFilters} onClick={toggleFilters}>
-                {advancedFilterSelectedCount > 0 ? (
-                  <FilterBadgeLabel>{advancedFilterSelectedCount}</FilterBadgeLabel>
-                ) : (
-                  <IconFilter />
-                )}
-                <span>Filters</span>
-              </ButtonFilterStyled>
               <Search onChange={setTitle} value={title} />
             </FiltersLeftWrapper>
             <FiltersControls>
@@ -602,6 +594,14 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
                 dropdownPosition={DropdownPosition.center}
                 items={fetchMyMarkets ? myMarketsSortItems : sortItems}
               />
+              <ButtonFilterStyled active={showAdvancedFilters} onClick={toggleFilters}>
+                {advancedFilterSelectedCount > 0 ? (
+                  <FilterBadgeLabel>{advancedFilterSelectedCount}</FilterBadgeLabel>
+                ) : (
+                  <IconFilter />
+                )}
+                <span>Filters</span>
+              </ButtonFilterStyled>
             </FiltersControls>
           </FiltersWrapper>
           {renderCategoryButtons()}
