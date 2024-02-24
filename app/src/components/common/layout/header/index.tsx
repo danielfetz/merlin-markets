@@ -20,7 +20,6 @@ import {
 import { Dropdown, DropdownItemProps, DropdownPosition } from '../../form/dropdown'
 import { IconAdd, IconClose, IconOmen } from '../../icons'
 import { Network } from '../../network'
-import { renderCategoryButtons } from '../../../../market/market_list/market_home.tsx'
 
 export const HeaderWrapper = styled.div`
   align-items: center;
@@ -288,7 +287,6 @@ const HeaderContainer: React.FC = (props: any) => {
       </AlertInfo>
       <HeaderInner>
         <ContentsLeft>
-          {renderCategoryButtons()}
           <LogoWrapper disabled={!hasRouter} href={'/#/liquidity'}>
             <Logo />
           </LogoWrapper>
