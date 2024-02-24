@@ -128,14 +128,14 @@ const getButtonTypeStyles = (buttonType: ButtonType = ButtonType.primaryLine): a
 
 export const ButtonCSS = css`
   align-items: center;
-  border-radius: 16px;
+  border-radius: 100px;
   border-style: solid;
   border-width: 1px;
   cursor: pointer;
   display: flex;
   font-size: ${({ theme }) => theme.fonts.defaultSize};
   line-height: ${({ theme }) => theme.fonts.defaultLineHeight};
-  font-weight: 400;
+  font-weight: 800;
   height: 40px;
   justify-content: center;
   letter-spacing: 0.2px;
@@ -145,7 +145,6 @@ export const ButtonCSS = css`
   text-align: center;
   user-select: none;
   white-space: nowrap;
-  font-family: Roboto;
 
   ${props => getButtonTypeStyles((props as any).buttonType)}
 `

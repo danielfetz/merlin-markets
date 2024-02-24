@@ -24,34 +24,45 @@ import { renderCategoryButtons } from '../../../../market/market_list/market_hom
 
 export const HeaderWrapper = styled.div`
   align-items: center;
-  background: ${props => props.theme.header.backgroundColor};
   display: flex;
+  flex-flow: column;
   flex-grow: 0;
   flex-shrink: 0;
-  height: 72px;
-  padding: 0 30px;
+  height: auto;
   justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 5;
 `
 
+export const AlertInfo = styled.div`
+  background: gold;
+  min-height: 46px;
+  font-size: 15px;
+  font-weight: 700;
+  width: 100%;
+  display: flex;
+  padding: 0 16px;
+`
+
+export const AlertInfoSpan = styled.div`
+  width: 1400px;
+  margin: 0 auto;
+  padding: 12px 0;
+`
+
 export const HeaderInner = styled.div`
   align-items: center;
   display: flex;
   flex-direction: row;
-  height: 100%;
+  height: 72px;
   justify-content: space-between;
-  margin: 0 auto;
   max-width: 100%;
   padding: 0 24px;
   position: relative;
-  width: 1000px;
-  background: white;
-  border-radius: 22px;
-  margin-top: 32px;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.01), 0px 6px 12px rgba(0, 0, 0, 0.01);
-  border: 1px solid #ececf6;
+  width: 100%;
+  border-bottom: 1px solid #ececf6;
+  background: ${props => props.theme.header.backgroundColor};
 `
 
 export const LogoWrapper = styled.a<{ disabled?: boolean }>`
@@ -95,6 +106,8 @@ const ButtonCSS = css`
 
 const ButtonConnectWalletStyled = styled(Button)`
   margin-left: 12px;
+  font-size: 16px;
+  font-family: inherit;
 `
 
 export const ButtonSettings = styled(ButtonRound)`
@@ -267,6 +280,12 @@ const HeaderContainer: React.FC = (props: any) => {
 
   return (
     <HeaderWrapper {...restProps}>
+      <AlertInfo>
+        <AlertInfoSpan>
+          Merlin is currently only available on desktop with a browser extension wallet (e.g. MetaMask) connected to
+          Gnosis Chain. Mobile and Walletconnect support are coming soon. Use at your own risk.
+        </AlertInfoSpan>
+      </AlertInfo>
       <HeaderInner>
         <ContentsLeft>
           {renderCategoryButtons()}

@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
   .logo {
-    font-size: 19px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 800;
     color: #333;
   }
   .text {

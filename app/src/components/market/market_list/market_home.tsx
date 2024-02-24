@@ -22,7 +22,6 @@ import {
   DropdownVariant,
 } from '../../common/form/dropdown'
 import { IconFilter } from '../../common/icons/IconFilter'
-import { IconSearch } from '../../common/icons/IconSearch'
 import { InlineLoading } from '../../loading'
 import { ListCard } from '../common_sections/list/list_card'
 import { ListItem } from '../common_sections/list/list_item'
@@ -31,31 +30,66 @@ import { AdvancedFilters } from './advanced_filters'
 import { Search } from './search'
 
 const InfoCardsOverview = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(322.667px, 1fr));
-  gap: 16px;
-  overflow-x: scroll;
   max-width: 100%;
+  display: grid;
+  overflow-x: scroll;
+  padding-bottom: 32px;
+  scroll-padding-left: 2.5rem;
+  scroll-padding-right: 2.5rem;
+  grid-auto-flow: row;
+
+  @media (min-width: 1060px) {
+    grid-template-columns: repeat(5, 310px);
+    gap: 16px;
+  }
 
   @media (max-width: 1059px) {
-    grid-template-columns: repeat(3, 290px);
-    scroll-padding-left: 2.5rem;
-    scroll-padding-right: 2.5rem;
-    gap: 10px;
-    grid-auto-flow: row;
+    grid-template-columns: repeat(5, 310px);
+    gap: 16px;
   }
 `
 
 const InfoCard = styled.div`
-  border-radius: 18px;
+  border-radius: 10px;
   width: 100%;
   justify-content: space-between;
   display: flex;
-  min-height: 200px;
+  min-height: 220px;
+  border: 1px solid #efeff9;
+`
+
+const ActionInfo = styled.div`
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 0;
+  border-radius: 9px;
+  width: 100%;
+`
+
+const ActionInfoTitle = styled.div`
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+`
+
+const ActionInfoDescription = styled.div`
+  font-size: 16px;
+`
+
+const ActionInfoButton = styled.div`
+  font-size: 15px;
+  font-weight: 700;
+  background: #00000030;
+  padding: 8px 17px;
+  width: fit-content;
+  border-radius: 20px;
+  margin-top: 10px;
 `
 
 const TopContents = styled.div`
-  padding: 24px 0px;
+  padding: 0px;
 `
 
 const FiltersWrapper = styled.div`
@@ -63,17 +97,16 @@ const FiltersWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  padding-bottom: 20px;
 
   @media (min-width: ${props => props.theme.themeBreakPoints.sm}) {
-    flex-direction: row;
+    flex-direction: column;
   }
 `
 
 const FiltersControls = styled.div<{ disabled?: boolean }>`
   align-items: center;
   display: flex;
-  gap: 10px;
-  margin-left: auto;
   margin-right: auto;
   pointer-events: ${props => (props.disabled ? 'none' : 'initial')};
 
@@ -97,11 +130,6 @@ const ButtonRoundStyled = styled(ButtonRound)<{
   }
 `
 
-const ButtonSearchStyled = styled(ButtonRoundStyled as any)`
-  width: 40px;
-  padding: 0;
-`
-
 const FilterBadgeLabel = styled.span`
   width: 22px;
   height: 22px;
@@ -119,7 +147,7 @@ const FilterBadgeLabel = styled.span`
 const ButtonFilterStyled = styled(ButtonRoundStyled as any)`
   padding: 0 17px;
   span {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 16px;
   }
   & > * + * {
@@ -176,14 +204,20 @@ const CustomDropdownItem = styled.div`
 
 const SortDropdown = styled(Dropdown)`
   min-width: 170px;
+  background: transparent;
+  border: 0;
 `
 
 const MarketsDropdown = styled(Dropdown)`
-  width: 100%;
+  width: fit-content;
+  background: transparent;
+  border: 0;
 `
 
 const MarketsFilterDropdown = styled(Dropdown)`
   width: 100%;
+  background: transparent;
+  border: 0;
 `
 
 const BottomContents = styled.div`
@@ -195,12 +229,9 @@ const BottomContents = styled.div`
 
 const FiltersLeftWrapper = styled.div`
   display: flex;
-  align-items: center;
+  width: 100%;
   & > * + * {
     margin-left: 10px;
-  }
-  @media (max-width: ${props => props.theme.themeBreakPoints.sm}) {
-    margin-bottom: 12px;
   }
 `
 
@@ -293,7 +324,6 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
   const [sortIndex, setSortIndex] = useState(currentFilter.sortIndex)
   const [sortBy, setSortBy] = useState<Maybe<MarketsSortCriteria>>(currentFilter.sortBy)
   const [sortByDirection, setSortByDirection] = useState<'asc' | 'desc'>(currentFilter.sortByDirection)
-  const [showSearch, setShowSearch] = useState<boolean>(currentFilter.title.length > 0 ? true : false)
   const [showAdvancedFilters, setShowAdvancedFilters] = useState<boolean>(
     currentFilter.currency || currentFilter.arbitrator || currentFilter.curationSource !== CurationSource.ALL_SOURCES,
   )
@@ -414,13 +444,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
     }
   }, [currentFilter, fetchMyMarkets])
 
-  const toggleSearch = useCallback(() => {
-    setShowAdvancedFilters(false)
-    setShowSearch(!showSearch)
-  }, [showSearch])
-
   const toggleFilters = useCallback(() => {
-    setShowSearch(false)
     setShowAdvancedFilters(!showAdvancedFilters)
   }, [showAdvancedFilters])
 
@@ -494,27 +518,83 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
       <InfoCardsOverview>
         <InfoCard
           style={{
-            background: 'linear-gradient(85deg, rgb(93, 120, 189) 3.16%, rgb(164, 168, 181) 110.87%)',
+            background: '#fff4e4',
+            backgroundImage:
+              'url("https://d1m1s6un1a8qgj.cloudfront.net/static/dashboard/first-step-card-pattern-3.svg")',
           }}
-        />
-        <InfoCard style={{ background: 'linear-gradient(to right, rgb(211, 84, 84) 0%, rgb(200, 137, 110) 100%)' }} />
-        <InfoCard style={{ background: 'linear-gradient(to right, rgb(98, 92, 164) 0%, rgb(140, 117, 205) 100%)' }} />
+        >
+          <ActionInfo
+            style={{
+              borderTop: '9px solid #f9bd61',
+            }}
+          >
+            <ActionInfoTitle>How Merlin works</ActionInfoTitle>
+            <ActionInfoDescription>How can you bet? How will you get paid out?</ActionInfoDescription>
+            <ActionInfoButton
+              style={{
+                background: '#f9bd61',
+              }}
+            >
+              View FAQ
+            </ActionInfoButton>
+          </ActionInfo>
+        </InfoCard>
+        <InfoCard
+          style={{
+            background: '#f9f6ff',
+            backgroundImage:
+              'url("https://d1m1s6un1a8qgj.cloudfront.net/static/dashboard/first-step-card-pattern-2.svg")',
+          }}
+        >
+          <ActionInfo
+            style={{
+              borderTop: '9px solid #d4c7f2',
+            }}
+          >
+            <ActionInfoTitle>2024 Presidential Election</ActionInfoTitle>
+            <ActionInfoDescription>Who will get elected?</ActionInfoDescription>
+            <ActionInfoButton
+              style={{
+                background: '#d4c7f2',
+              }}
+            >
+              Bet now
+            </ActionInfoButton>
+          </ActionInfo>
+        </InfoCard>
+        <InfoCard
+          style={{
+            background: 'linear-gradient(to right, rgb(98, 92, 164) 0%, rgb(140, 117, 205) 100%)',
+          }}
+        >
+          <ActionInfo
+            style={{
+              borderTop: '9px solid #f9bd61',
+            }}
+          >
+            <ActionInfoTitle>Ethereum ETF</ActionInfoTitle>
+            <ActionInfoDescription>Approved by June 30?</ActionInfoDescription>
+            <ActionInfoButton>Bet now</ActionInfoButton>
+          </ActionInfo>
+        </InfoCard>
+        <InfoCard
+          style={{
+            background: 'linear-gradient(87deg, rgb(9, 134, 181) 0%, rgb(7, 208, 124) 100%)',
+          }}
+        >
+          <ActionInfo>
+            <ActionInfoTitle>SafeDAO</ActionInfoTitle>
+            <ActionInfoDescription>Wen token transferable? How many Safes created in 2024?</ActionInfoDescription>
+            <ActionInfoButton>View more</ActionInfoButton>
+          </ActionInfo>
+        </InfoCard>
+        <InfoCard style={{ background: 'linear-gradient(87deg, rgb(9, 134, 181) 0%, rgb(7, 208, 124) 100%)' }} />
       </InfoCardsOverview>
       <ListCard>
         <TopContents>
           <FiltersWrapper>
             <FiltersLeftWrapper>
-              <ButtonFilterStyled active={showAdvancedFilters} onClick={toggleFilters}>
-                {advancedFilterSelectedCount > 0 ? (
-                  <FilterBadgeLabel>{advancedFilterSelectedCount}</FilterBadgeLabel>
-                ) : (
-                  <IconFilter />
-                )}
-                <span>Filters</span>
-              </ButtonFilterStyled>
-              <ButtonSearchStyled active={showSearch} onClick={toggleSearch}>
-                <IconSearch />
-              </ButtonSearchStyled>
+              <Search onChange={setTitle} value={title} />
             </FiltersLeftWrapper>
             <FiltersControls>
               <MarketsDropdown
@@ -543,10 +623,17 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
                 dropdownPosition={DropdownPosition.center}
                 items={fetchMyMarkets ? myMarketsSortItems : sortItems}
               />
+              <ButtonFilterStyled active={showAdvancedFilters} onClick={toggleFilters}>
+                {advancedFilterSelectedCount > 0 ? (
+                  <FilterBadgeLabel>{advancedFilterSelectedCount}</FilterBadgeLabel>
+                ) : (
+                  <IconFilter />
+                )}
+                <span>Filters</span>
+              </ButtonFilterStyled>
             </FiltersControls>
           </FiltersWrapper>
         </TopContents>
-        {showSearch && <Search onChange={setTitle} value={title} />}
         {showAdvancedFilters && (
           <AdvancedFilters
             arbitrator={arbitrator}

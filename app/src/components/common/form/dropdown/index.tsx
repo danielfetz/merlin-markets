@@ -64,16 +64,16 @@ const DropdownDisabledCSS = css`
 `
 
 const DropdownVariantPillCSS = css`
-  border-radius: 16px;
-  padding: 8px 16px;
+  border-radius: 100px;
+  padding: 7px 16px;
   border: 1px solid ${props => props.theme.dropdown.buttonBorderColor};
 `
 
 const DropdownVariantCardCSS = css`
   ${CardCSS};
   flex: 1;
-  padding: 8px 16px;
-  border-radius: 16px;
+  padding: 7px 16px;
+  border-radius: 100px;
   background-color: ${props => props.theme.dropdown.buttonBackgroundColor};
   position: relative;
   border: 1px solid ${props => props.theme.dropdown.buttonBorderColor};
@@ -139,8 +139,8 @@ const CurrentItem = styled.div`
   display: flex;
   flex-grow: 1;
   flex-shrink: 0;
-  font-size: 14px;
-  font-weight: normal;
+  font-size: 16px;
+  font-weight: 800;
   height: 22px;
   line-height: 1.2;
   margin: 0;

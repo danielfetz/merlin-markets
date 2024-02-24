@@ -2,22 +2,23 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { Textfield } from '../../../common'
-import { IconSearchGrey } from '../../../common/icons'
 
 const Wrapper = styled.div`
-  margin: 0 25px 24px 25px;
   position: relative;
-  svg {
+  width: 100%;
+  span {
     position: absolute;
-    left: 13px;
-    top: 9px;
+    left: 20px;
+    top: 12px;
+    opacity: 0.5;
+    font-size: 18px;
   }
 `
 
 const SearchTextField = styled(Textfield)`
-  height: 40px;
-  border-radius: 8px;
-  padding-left: 45px;
+  height: 48px;
+  border-radius: 100px;
+  padding-left: 47px;
 `
 
 interface Props {
@@ -30,8 +31,10 @@ export const Search = (props: Props) => {
 
   return (
     <Wrapper>
-      <IconSearchGrey />
-      <SearchTextField onChange={e => onChange(e.target.value)} placeholder="Search Market" value={value} />
+      <span aria-label="search" role="img">
+        🔍
+      </span>
+      <SearchTextField onChange={e => onChange(e.target.value)} placeholder="Search markets" value={value} />
     </Wrapper>
   )
 }

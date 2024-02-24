@@ -13,6 +13,7 @@ export const TextfieldCSS = css<{ hasError?: boolean; hasSuccess?: boolean }>`
     (props.hasError && props.theme.colors.error) ||
     (props.hasSuccess && props.theme.textfield.color) ||
     props.theme.textfield.color};
+  font-family: ${props => props.theme.fonts.fontFamily};
   font-size: ${props => props.theme.textfield.fontSize};
   font-weight: ${props => props.theme.textfield.fontWeight};
   line-height: 1.2;

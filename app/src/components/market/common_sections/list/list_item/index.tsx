@@ -52,20 +52,19 @@ const Wrapper = styled(NavLink)`
 
 const Title = styled.h2`
   color: ${props => props.theme.colors.textColorDarker};
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 700;
   line-height: 1.2;
   margin: 0 0 16px 0;
 `
 
 const Info = styled.div`
-  font-family: 'Roboto';
   align-items: center;
   color: ${props => props.theme.colors.textColorLighter};
   display: flex;
   flex-wrap: wrap;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 600;
   line-height: 1.2;
   overflow-wrap: break-word;
   white-space: normal;
@@ -76,7 +75,7 @@ const Info = styled.div`
 
 const Outcome = styled.span`
   color: ${props => props.theme.colors.primaryLight};
-  font-weight: 500;
+  font-weight: bold;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;

@@ -20,7 +20,7 @@ export function colors(darkMode: boolean): Colors {
     primary4: darkMode ? '' : '#E8EAF6',
 
     //other
-    white: darkMode ? '' : '#f8f8f8',
+    white: darkMode ? '' : '#fbfaf8',
     profit: darkMode ? '' : '#4B9E98',
     alert: darkMode ? '' : '#E57373',
     link: darkMode ? '' : '#1E88E5',
@@ -35,9 +35,9 @@ export function colors(darkMode: boolean): Colors {
 
 export const theme = {
   fonts: {
-    defaultSize: '14px',
+    defaultSize: '15x',
     defaultLineHeight: '16px',
-    fontFamily: `'Roboto', 'Helvetica Neue', 'Arial', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', '-apple-system', 'BlinkMacSystemFont', sans-serif`,
+    fontFamily: `'Nunito', sans-serif`,
     fontFamilyCode: `source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace`,
   },
   buttonPrimary: {
@@ -110,8 +110,8 @@ export const theme = {
     dimensions: '40px',
   },
   buttonRound: {
-    borderRadius: '16px',
-    fontSize: '14px',
+    borderRadius: '100px',
+    fontSize: '16px',
     height: '40px',
     lineHeight: '16px',
     padding: '12px 17px',
@@ -158,8 +158,9 @@ export const theme = {
     },
   },
   cards: {
-    backgroundColor: 'transparent',
-    borderRadius: '8px',
+    backgroundColor: 'white',
+    border: '1px solid #efeff9',
+    borderRadius: '16px',
     paddingHorizontal: '24px',
     paddingVertical: '20px',
     textColor: '#000',
@@ -167,7 +168,7 @@ export const theme = {
     titleColor: '#000',
   },
   header: {
-    backgroundColor: 'transparent',
+    backgroundColor: '#fbfaf8',
     boxShadow: 'none',
     height: '66px',
     color: '#37474F',
@@ -178,8 +179,7 @@ export const theme = {
     sm: '480px',
     xl: '1024px',
     xs: '320px',
-    xxl: '1280px',
-    xxxl: '1366px',
+    xxl: '1400px',
   },
   borders: {
     tooltip: '#cfd8dc',
@@ -199,7 +199,7 @@ export const theme = {
     mainPadding: '30px',
   },
   textfield: {
-    backgroundColor: 'transparent',
+    backgroundColor: '#fff',
     borderColor: '#DCDFF2',
     borderColorActive: '#9FA8DA',
     borderColorOnHover: '#C5CAE9',
@@ -207,18 +207,18 @@ export const theme = {
     borderStyle: 'solid',
     borderWidth: '1px',
     color: '#37474F',
-    fontSize: '14px',
-    fontWeight: '500',
+    fontSize: '16px',
+    fontWeight: '800',
     height: '40px',
     outline: 'none',
     paddingHorizontal: '20px',
     paddingVertical: '12px',
     placeholderColor: '#86909E',
-    placeholderFontSize: '14px',
-    placeholderFontWeight: '400',
+    placeholderFontSize: '16px',
+    placeholderFontWeight: '800',
   },
   mainContainer: {
-    maxWidth: '1000px',
+    maxWidth: '1400px',
   },
   moreMenu: {
     buttonBorder: '#DCDFF2',
@@ -396,7 +396,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
 const TextWrapper = styled.div<{ color: keyof Colors }>`
   color: ${({ color, theme }) => (theme as any)[color]};
-  font-family: Roboto;
 `
 
 export const TYPE = {
@@ -454,7 +453,7 @@ export const TYPE = {
       <TextWrapper
         {...restProps}
         style={{
-          fontSize: '14px',
+          fontSize: '16px',
           fontWeight: 500,
           letterSpacing: '0.2px',
           lineHeight: '18px',
