@@ -64,6 +64,8 @@ const ActionInfo = styled.div`
   flex-direction: column;
   gap: 8px;
   padding-right: 0;
+  border-radius: 9px;
+  width: 100%
 `
 
 const ActionInfoTitle = styled.div`
@@ -519,10 +521,15 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
       <InfoCardsOverview>
         <InfoCard
           style={{
-            background: 'linear-gradient(85deg, rgb(93, 120, 189) 3.16%, rgb(164, 168, 181) 110.87%)',
+            background: '#fff4e4',
+            backgroundImage: 'url("https://d1m1s6un1a8qgj.cloudfront.net/static/dashboard/first-step-card-pattern-3.svg")'
           }}
         >
-          <ActionInfo>
+          <ActionInfo
+            style={{
+              borderTop: '9px solid #f9bd61',
+            }}
+          >
             <ActionInfoTitle>How Merlin works</ActionInfoTitle>
             <ActionInfoDescription>How can you bet? How will you get paid out?</ActionInfoDescription>
             <ActionInfoButton>View FAQ</ActionInfoButton>
@@ -533,7 +540,11 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
             background: 'linear-gradient(to right, rgb(211, 84, 84) 0%, rgb(200, 137, 110) 100%)',
           }}
         >
-          <ActionInfo>
+          <ActionInfo
+            style={{
+              borderTop: '9px solid #f9bd61',
+            }}
+          >
             <ActionInfoTitle>2024 Presidential Election</ActionInfoTitle>
             <ActionInfoDescription>Who will get elected?</ActionInfoDescription>
             <ActionInfoButton>Bet now</ActionInfoButton>
@@ -547,7 +558,6 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
           <ActionInfo
             style={{
               borderTop: '9px solid #f9bd61',
-              borderRadius: '9px',
             }}
           >
             <ActionInfoTitle>Ethereum ETF</ActionInfoTitle>
