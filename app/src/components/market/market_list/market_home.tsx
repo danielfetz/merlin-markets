@@ -542,7 +542,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
         >
           <ActionInfo
             style={{
-              borderTop: '9px solid #f9f6ff',
+              borderTop: '9px solid #d4c7f2',
             }}
           >
             <ActionInfoTitle>2024 Presidential Election</ActionInfoTitle>
