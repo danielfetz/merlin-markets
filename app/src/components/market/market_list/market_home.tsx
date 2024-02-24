@@ -214,6 +214,8 @@ const MarketsDropdown = styled(Dropdown)`
 
 const MarketsFilterDropdown = styled(Dropdown)`
   width: 100%;
+  background: transparent;
+  border: 0;
 `
 
 const BottomContents = styled.div`
