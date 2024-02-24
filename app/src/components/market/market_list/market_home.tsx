@@ -1,4 +1,3 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 
 import { ConnectedWeb3Context } from '../../../contexts'
@@ -107,7 +106,6 @@ const FiltersWrapper = styled.div`
 const FiltersControls = styled.div<{ disabled?: boolean }>`
   align-items: center;
   display: flex;
-  gap: 10px;
   margin-right: auto;
   pointer-events: ${props => (props.disabled ? 'none' : 'initial')};
 
