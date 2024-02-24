@@ -33,7 +33,7 @@ const InfoCardsOverview = styled.div`
   max-width: 100%;
   display: grid;
   overflow-x: scroll;
-  padding-bottom: 24px;
+  padding-bottom: 32px;
   scroll-padding-left: 2.5rem;
   scroll-padding-right: 2.5rem;
   grid-auto-flow: row;
@@ -60,7 +60,6 @@ const InfoCard = styled.div`
 
 const ActionInfo = styled.div`
   padding: 20px;
-  color: white;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -233,9 +232,6 @@ const FiltersLeftWrapper = styled.div`
   width: 100%;
   & > * + * {
     margin-left: 10px;
-  }
-  @media (max-width: ${props => props.theme.themeBreakPoints.sm}) {
-    margin-bottom: 12px;
   }
 `
 
@@ -539,12 +535,14 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
         </InfoCard>
         <InfoCard
           style={{
-            background: 'linear-gradient(to right, rgb(211, 84, 84) 0%, rgb(200, 137, 110) 100%)',
+            background: '#f9f6ff',
+            backgroundImage:
+              'url("https://d1m1s6un1a8qgj.cloudfront.net/static/dashboard/first-step-card-pattern-2.svg")',
           }}
         >
           <ActionInfo
             style={{
-              borderTop: '9px solid #f9bd61',
+              borderTop: '9px solid #f9f6ff',
             }}
           >
             <ActionInfoTitle>2024 Presidential Election</ActionInfoTitle>
