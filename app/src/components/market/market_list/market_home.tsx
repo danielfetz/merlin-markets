@@ -97,6 +97,7 @@ const FiltersWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  padding-bottom: 20px;
 
   @media (min-width: ${props => props.theme.themeBreakPoints.sm}) {
     flex-direction: column;
@@ -530,7 +531,13 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
           >
             <ActionInfoTitle>How Merlin works</ActionInfoTitle>
             <ActionInfoDescription>How can you bet? How will you get paid out?</ActionInfoDescription>
-            <ActionInfoButton>View FAQ</ActionInfoButton>
+            <ActionInfoButton
+              style={{
+                background: '#f9bd61'
+              }}
+            >
+              View FAQ
+            </ActionInfoButton>
           </ActionInfo>
         </InfoCard>
         <InfoCard
