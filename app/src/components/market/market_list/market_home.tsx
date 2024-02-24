@@ -66,7 +66,7 @@ const ActionInfo = styled.div`
   gap: 8px;
   padding-right: 0;
   border-radius: 9px;
-  width: 100%
+  width: 100%;
 `
 
 const ActionInfoTitle = styled.div`
@@ -523,7 +523,8 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
         <InfoCard
           style={{
             background: '#fff4e4',
-            backgroundImage: 'url("https://d1m1s6un1a8qgj.cloudfront.net/static/dashboard/first-step-card-pattern-3.svg")',
+            backgroundImage: 
+              'url("https://d1m1s6un1a8qgj.cloudfront.net/static/dashboard/first-step-card-pattern-3.svg")',
           }}
         >
           <ActionInfo
