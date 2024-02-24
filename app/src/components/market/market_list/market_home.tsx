@@ -202,10 +202,14 @@ const CustomDropdownItem = styled.div`
 
 const SortDropdown = styled(Dropdown)`
   min-width: 170px;
+  background: transparent;
+  border: 0;
 `
 
 const MarketsDropdown = styled(Dropdown)`
   width: fit-content;
+  background: transparent;
+  border: 0;
 `
 
 const MarketsFilterDropdown = styled(Dropdown)`
