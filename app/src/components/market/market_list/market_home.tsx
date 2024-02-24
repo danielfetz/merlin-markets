@@ -544,7 +544,12 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
             background: 'linear-gradient(to right, rgb(98, 92, 164) 0%, rgb(140, 117, 205) 100%)',
           }}
         >
-          <ActionInfo>
+          <ActionInfo
+            style={{
+              borderTop: '9px solid #f9bd61',
+              borderRadius: '9px',
+            }}
+          >
             <ActionInfoTitle>Ethereum ETF</ActionInfoTitle>
             <ActionInfoDescription>Approved by June 30?</ActionInfoDescription>
             <ActionInfoButton>Bet now</ActionInfoButton>
