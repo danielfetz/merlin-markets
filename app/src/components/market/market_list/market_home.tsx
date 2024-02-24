@@ -39,22 +39,22 @@ const InfoCardsOverview = styled.div`
   grid-auto-flow: row;
 
   @media (min-width: 1060px) {
-    grid-template-columns: repeat(5, 325px);
-    gap: 12px;
+    grid-template-columns: repeat(5, 310px);
+    gap: 16px;
   }
 
   @media (max-width: 1059px) {
-    grid-template-columns: repeat(5, 305px);
-    gap: 10px;
+    grid-template-columns: repeat(5, 310px);
+    gap: 16px;
   }
 `
 
 const InfoCard = styled.div`
-  border-radius: 18px;
+  border-radius: 10px;
   width: 100%;
   justify-content: space-between;
   display: flex;
-  min-height: 200px;
+  min-height: 220px;
 `
 
 const ActionInfo = styled.div`
@@ -67,20 +67,20 @@ const ActionInfo = styled.div`
 `
 
 const ActionInfoTitle = styled.div`
-  font-size: 18px;
-  font-weight: 800;
+  font-size: 22px;
+  font-weight: 600;
   line-height: 1.3;
 `
 
 const ActionInfoDescription = styled.div`
-  font-size: 15px;
+  font-size: 16px;
 `
 
 const ActionInfoButton = styled.div`
   font-size: 15px;
   font-weight: 700;
   background: #00000030;
-  padding: 5px 14px;
+  padding: 8px 17px;
   width: fit-content;
   border-radius: 20px;
   margin-top: 10px;
