@@ -533,7 +533,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
             <ActionInfoDescription>How can you bet? How will you get paid out?</ActionInfoDescription>
             <ActionInfoButton
               style={{
-                background: '#f9bd61'
+                background: '#f9bd61',
               }}
             >
               View FAQ
@@ -554,7 +554,13 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
           >
             <ActionInfoTitle>2024 Presidential Election</ActionInfoTitle>
             <ActionInfoDescription>Who will get elected?</ActionInfoDescription>
-            <ActionInfoButton>Bet now</ActionInfoButton>
+            <ActionInfoButton
+              style={{
+                background: '#d4c7f2',
+              }}
+            >
+              Bet now
+            </ActionInfoButton>
           </ActionInfo>
         </InfoCard>
         <InfoCard
