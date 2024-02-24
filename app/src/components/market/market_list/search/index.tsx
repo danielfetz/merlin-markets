@@ -5,20 +5,20 @@ import { Textfield } from '../../../common'
 
 const Wrapper = styled.div`
   position: relative;
-  width: auto;
+  width: 100%;
   span {
     position: absolute;
-    left: 17px;
-    top: 8px;
+    left: 20px;
+    top: 12px;
     opacity: 0.5;
-    font-size: 16px;
+    font-size: 18px;
   }
 `
 
 const SearchTextField = styled(Textfield)`
-  height: 40px;
+  height: 48px;
   border-radius: 100px;
-  padding-left: 40px;
+  padding-left: 47px;
 `
 
 interface Props {
