@@ -523,7 +523,7 @@ export const MarketHome: React.FC<Props> = (props: Props) => {
         <InfoCard
           style={{
             background: '#fff4e4',
-            backgroundImage: 
+            backgroundImage:
               'url("https://d1m1s6un1a8qgj.cloudfront.net/static/dashboard/first-step-card-pattern-3.svg")',
           }}
         >
