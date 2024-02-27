@@ -179,7 +179,7 @@ export const theme = {
     sm: '480px',
     xl: '1024px',
     xs: '320px',
-    xxl: '1400px',
+    xxl: '1350px',
   },
   borders: {
     tooltip: '#cfd8dc',
@@ -218,7 +218,7 @@ export const theme = {
     placeholderFontWeight: '800',
   },
   mainContainer: {
-    maxWidth: '1400px',
+    maxWidth: '1350px',
   },
   moreMenu: {
     buttonBorder: '#DCDFF2',
