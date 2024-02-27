@@ -45,7 +45,7 @@ export const AlertInfo = styled.div`
 `
 
 export const AlertInfoSpan = styled.div`
-  width: 1400px;
+  width: 1350px;
   margin: 0 auto;
   padding: 12px 0;
 `
